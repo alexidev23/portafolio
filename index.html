@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/icon.svg" type="image/x-icon">
+    <title>Portafoli-AlexisDev</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar container">
+        <a href="#Inicio" class="logo">
+            <img src="./assets/img/iconito.svg" alt="Icono">
+            <h1>AlexisDev</h1>
+        </a>
+        <input type="checkbox" id="toggler">
+        <label for="toggler">
+            <i class="fa-solid fa-bars" style="color: #fff;"></i>
+        </label>
+        <div class="menu">
+            <ul class="list">
+                <li class="links">
+                    <a href="#Inicio">Inico</a>
+                </li>
+                <li class="links">
+                    <a href="#Sobremi">Sobre Mi</a>
+                </li>
+                <li class="links">
+                    <a href="#Portafolio">Portafolio</a>
+                </li>
+                <li class="links">
+                    <a href="#Contacto">Contacto</a>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+
+    <section id="Inicio">
+        <div class="contenedor">
+            <img src="./assets/img/foto5.jpg" alt="Alexis Escobar" class="img-principal--1">
+            <div class="contenedor-titulo">
+                <p class="nombre">Alexis Escobar</p>
+                <span class="sub-titulo">Desarrolador Web</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="Sobremi">
+        <h2 id="Titulo">SOBRE MI</h2>
+        <div class="contenedor">
+            <img src="./assets/img/foto5.jpg" alt="Alexis Escobar" class="img-principal">
+            <div class="texto">
+                <p class="info">
+                    Hola, soy Alexis Escobar, actualmente estoy realizando una tecnicatura superior en programacion, pero mi objetivo actualmente es ser un desarrollador FrontEnd, ya que me interesa todo lo que es el diseno y el maquetado de las paginas webs
+                </p>
+                <p class="skills-titulo">skills</p>
+                <div class="skills">
+                    <img class="items" src="./assets/img/html.svg" alt="Html" title="Html">
+                    <img class="items" src="./assets/img/css.svg" alt="Css" title="Css">
+                    <img class="items" src="./assets/img/javascript.svg" alt="JavaScript" title="JavaScript">
+                    <img class="items" src="./assets/img/python.svg" alt="Python" title="Python">
+                    <img class="items" src="./assets/img/django.svg" alt="Django" title="Django">
+                    <img class="items" src="./assets/img/bootstrap.svg" alt="Bootstrap" title="Bootstrap">
+                    <img class="items" src="./assets/img/git.svg" alt="Git" title="Git">
+                </div>
+                <div class="cv">
+                    <a href="https://drive.google.com/file/d/15Rw5A5VtMQbGsnfOt1obYy7eTy9At44m/view?usp=sharing" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Portafolio">
+        <h2 id="Titulo">PORTAFOLIO</h2>
+        <div class="caja">
+            <div id="prueba"></div>
+            <div class="proyecto">
+                <div class="imagen">                    
+                    <img src="./assets/img/proyectos/calculadora.png" alt="Proyecto-1">
+                </div>
+                <div class="informacion">
+                    <p>Calculadora</p>
+                    <div class="skills-proyecto">
+                        <img src="./assets/img/html.svg" alt="HTML">
+                        <img src="./assets/img/css.svg" alt="CSS">
+                        <img src="./assets/img/javascript.svg" alt="JAVASCRIPT">
+                    </div>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="imagen">
+                    <img src="./assets/img/portfolio-1.jpg" alt="Proyecto-1">
+                </div>
+                <div class="informacion">
+                    <p>Encriptador de texto</p>
+                    <div class="skills-proyecto">
+                        <img src="./assets/img/html.svg" alt="HTML">
+                        <img src="./assets/img/css.svg" alt="CSS">
+                        <img src="./assets/img/javascript.svg" alt="JAVASCRIPT">
+                    </div>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="imagen">
+                    <img src="./assets/img/portfolio-1.jpg" alt="Proyecto-1">
+                </div>
+                <div class="informacion">
+                    <p>Portafolio - Proyecto final</p>
+                    <div class="skills-proyecto">
+                        <img src="./assets/img/html.svg" alt="HTML">
+                        <img src="./assets/img/css.svg" alt="CSS">
+                        <img src="./assets/img/bootstrap.svg" alt="BOOTSTRAP">
+                        <img src="./assets/img/django.svg" alt="DJANGO">
+                    </div>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="imagen">
+                    <img src="./assets/img/portfolio-1.jpg" alt="Proyecto-1">
+                </div>
+                <div class="informacion">
+                    <p>Pagina Web - Pasteleria</p>
+                    <div class="skills-proyecto">
+                        <img src="./assets/img/html.svg" alt="">
+                        <img src="./assets/img/css.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contacto">
+        <h2 id="Titulo">CONTACTO</h2>
+        <div class="mis-redes">
+            <div class="formulario">
+                <form action="https://formsubmit.co/alexisescobardev@gmail.com" method="POST" />
+                    <div class="forms">
+                        <div class="forms-input">
+                            <input type="text" placeholder="Ingrese su nombre" name="nombre">
+                        </div>
+                        <div class="forms-input">
+                            <input type="text" placeholder="Ingrese su apellido"  name="apellido">
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <input type="email" placeholder="Ingrese su correo" name="email">
+                    </div>
+                    <div class="form-textarea">
+                        <textarea name="comentario" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                    </div>
+                    <button type="submit" id="enviar" class="btnEnviar" value="Enviar">Enviar</button>
+                </form>
+            </div>
+            <div class="redes">
+                <div class="redes-contenedor">
+                    <span class="redes-titulo">Correo Electronico</span>
+                    <div class="redes-sociales">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/gmail.svg" alt="GMAIL"> <span>alexisescobardev@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="redes-contenedor">
+                    <span class="redes-titulo">Telefono</span>
+                    <div class="redes-sociales">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send?phone=3516131402&" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/img/whatsapp.svg" alt="Whatsapp">
+                                <span>+54 3516131402</span>
+                            </a>
+                        </a>
+                    </div>
+                </div>
+                <div class="redes-contenedor">
+                    <span class="redes-titulo">Otras Redes</span>
+                    <div class="redes-sociales">
+                        <a href="https://github.com/AlexisEDev" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/github.svg" alt="GitHub">
+                        </a>
+                        <a href="https://www.instagram.com/alexescobar67/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexis-escobar-95b491184/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/img/linkedin.svg" alt="Linkedin">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+</body>
+</html>
