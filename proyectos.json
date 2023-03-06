@@ -1,0 +1,29 @@
+{
+    "proyecto1": {
+        "titulo": "Calculadora",
+        "tecnologias": ["html","css","javascript"],
+        "descripcion": "Este es mi primer proyecto, se trata de unacalculadora que resulve operaciones simples",
+        "img": ""
+    },
+
+    "proyecto2": {
+        "titulo": "Calculadora",
+        "tecnologias": ["html","css","javascript"],
+        "descripcion": "Este es mi primer proyecto, se trata de unacalculadora que resulve operaciones simples",
+        "img": ""
+    },
+
+    "proyecto3": {
+        "titulo": "Calculadora",
+        "tecnologias": ["html","css","javascript"],
+        "descripcion": "Este es mi primer proyecto, se trata de unacalculadora que resulve operaciones simples",
+        "img": ""
+    },
+
+    "proyecto4": {
+        "titulo": "Calculadora",
+        "tecnologias": ["html","css","javascript"],
+        "descripcion": "Este es mi primer proyecto, se trata de unacalculadora que resulve operaciones simples",
+        "img": ""
+    }
+}
