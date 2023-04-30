@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/img/icon.svg" type="image/x-icon">
-    <title>Portafoli-AlexisDev</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/modal.css">
+    <title>Portafolio - AlexisDev</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/tablet.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-<body>
-    <nav class="navbar container">
-        <a href="#Inicio" class="logo">
-            <img src="./assets/img/iconito.svg" alt="Icono">
-            <h1>AlexisDev</h1>
-        </a>
-        <input type="checkbox" id="toggler">
-        <label for="toggler">
-            <i class="fa-solid fa-bars" style="color: #fff;"></i>
-        </label>
-        <div class="menu">
-            <ul class="list">
-                <li class="links">
-                    <a href="#Inicio">Inico</a>
-                </li>
-                <li class="links">
-                    <a href="#Sobremi">Sobre Mi</a>
-                </li>
-                <li class="links">
-                    <a href="#Portafolio">Portafolio</a>
-                </li>
-                <li class="links">
-                    <a href="#Contacto">Contacto</a>
-                </li>
-            </ul>
-        </div> 
-    </nav>
 
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#Inicio" class="logo">
+                <img src="./assets/img/iconito.svg" alt="Icono">
+                <h1>AlexisDev</h1>
+            </a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler">
+                <i class="fa-solid fa-bars" style="color: #609dfa;"></i>
+            </label>
+            <div class="menu">
+                <ul class="list">
+                    <li class="links">
+                        <a href="#Inicio">Inico</a>
+                    </li>
+                    <li class="links">
+                        <a href="#Sobremi">Sobre Mi</a>
+                    </li>
+                    <li class="links">
+                        <a href="#Portafolio">Portafolio</a>
+                    </li>
+                    <li class="links">
+                        <a href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section id="Inicio">
         <div class="contenedor">
             <img src="./assets/img/foto5.jpg" alt="Alexis Escobar" class="img-principal--1">
@@ -57,163 +61,184 @@
             </div>
         </div>
     </section>
-
     <section id="Sobremi">
         <h2 id="Titulo">SOBRE MI</h2>
         <div class="contenedor">
             <img src="./assets/img/foto5.jpg" alt="Alexis Escobar" class="img-principal">
             <div class="texto">
                 <p class="info">
-                    Hola, soy Alexis Escobar, actualmente estoy realizando una tecnicatura superior en programacion, pero mi objetivo actualmente es ser un desarrollador FrontEnd, ya que me interesa todo lo que es el diseno y el maquetado de las paginas webs
+                    Hola, soy Alexis Escobar, actualmente estoy realizando una tecnicatura superior en programacion,
+                    pero mi objetivo actualmente es ser un desarrollador FrontEnd, ya que me interesa todo lo que es el
+                    diseno y el maquetado de las paginas webs
                 </p>
                 <p class="skills-titulo">skills</p>
                 <div class="skills">
-                    <img class="items" src="./assets/img/html.svg" alt="Html" title="Html">
+                    <img class="items" src="./assets/img/html5.svg" alt="Html" title="Html">
                     <img class="items" src="./assets/img/css.svg" alt="Css" title="Css">
                     <img class="items" src="./assets/img/javascript.svg" alt="JavaScript" title="JavaScript">
                     <img class="items" src="./assets/img/python.svg" alt="Python" title="Python">
                     <img class="items" src="./assets/img/django.svg" alt="Django" title="Django">
                     <img class="items" src="./assets/img/bootstrap.svg" alt="Bootstrap" title="Bootstrap">
                     <img class="items" src="./assets/img/git.svg" alt="Git" title="Git">
+                    <img class="items" src="./assets/img/php.svg" alt="PHP" title="PHP">
                 </div>
                 <div class="cv">
-                    <a href="https://drive.google.com/file/d/15Rw5A5VtMQbGsnfOt1obYy7eTy9At44m/view?usp=sharing" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                    <a href="https://drive.google.com/file/d/18l2L5ABZ45LaCkeRD5GU1fILcxsfRmxB/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">Descargar CV</a>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="Portafolio">
-        <h2 id="Titulo">PORTAFOLIO</h2>
+        <h2 class="titulo">PORTAFOLIO</h2>
         <div class="caja">
-
             <div class="proyecto">
-                <div class="imagen">                    
-                    <img src="./assets/img/proyectos/calculadora.png" alt="Calculadora">
+                <div class="imagen">
+                    <img src="./assets/img/proyectos/portafolioPython.png" alt="Calculadora">
                 </div>
                 <div class="informacion">
-                    <p>Calculadora</p>
-                    <div class="caja-info"> 
+                    <p>Proyecto Final - Portafolio</p>
+                    <div class="caja-info">
+                        <p>Proyecto final para coderhouse; es un portafolio y un blog</p>
                         <div class="skills-proyecto">
-                            <img src="./assets/img/html.svg" alt="HTML">
-                            <img src="./assets/img/css.svg" alt="CSS">
-                            <img src="./assets/img/javascript.svg" alt="JAVASCRIPT">
-                        </div>
-                        <div id="abrir">
-                            <i class="fa-solid fa-plus"></i>
-                            <p class="info">mas info</p>
+                            <h6 class="python">Python</h6>
+                            <h6 class="django">Django</h6>
+                            <h6 class="bootstrap">Bootstrap</h6>
+                            <div class="enlace">
+                                <a href="https://github.com/alexidev23/proyectoFinal" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-folder-open"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>            
-            
+            </div>
             <div class="proyecto">
-                <div class="imagen">                    
-                    <img src="./assets/img/proyectos/portafolio.png" alt="Portafolio - Proyecto Final">
+                <div class="imagen">
+                    <img src="./assets/img/proyectos/gymadmin.png" alt="Portafolio - Proyecto Final">
                 </div>
                 <div class="informacion">
-                    <p>Portafolio - Proyecto Final</p>
-                    <div class="caja-info"> 
+                    <p>Administracion de gimnasio</p>
+                    <div class="caja-info">
+                        <p>Pagina de gimansio para la administracion de alumnos, profesores y cursos</p>
                         <div class="skills-proyecto">
-                            <img src="./assets/img/html.svg" alt="HTML">
-                            <img src="./assets/img/css.svg" alt="CSS">
-                            <img src="./assets/img/javascript.svg" alt="JAVASCRIPT">
-                        </div>
-                        <div id="abrir">
-                            <i class="fa-solid fa-plus"></i>
-                            <p class="info">mas info</p>
+                            <h6 class="python">Python</h6>
+                            <h6 class="django">Django</h6>
+                            <h6 class="bootstrap">Bootstrap</h6>
+                            <div class="enlace">
+                                <a href="https://github.com/alexidev23/page-admin-gym" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-folder-open"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>            
-            
+            </div>
             <div class="proyecto">
-                <div class="imagen">                    
+                <div class="imagen">
                     <img src="./assets/img/proyectos/qr.png" alt="Proyecto-1">
                 </div>
                 <div class="informacion">
                     <p>Desafio-QR-code-component</p>
-                    <div class="caja-info"> 
+                    <div class="caja-info">
+                        <p>Idea sacada de Frontend Mentor, es una tarjeta donde se puede visualizar un QR</p>
                         <div class="skills-proyecto">
-                            <img src="./assets/img/html.svg" alt="HTML">
-                            <img src="./assets/img/css.svg" alt="CSS">
-                        </div>
-                        <div id="abrir">
-                            <i class="fa-solid fa-plus"></i>
-                            <p class="info">mas info</p>
+                            <h6 class="html">HTML</h6>
+                            <h6 class="css">CSS</h6>
+                            <div class="enlace">
+                                <a href="https://github.com/alexidev23/Desafio-QR-code-component" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-folder-open"
+                                        style="color: #ffffff;"></i></a>
+                                <a href="https://alexidev23.github.io/Desafio-QR-code-component/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-sharp fa-solid fa-globe"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>            
-            
+            </div>
             <div class="proyecto">
-                <div class="imagen">                    
+                <div class="imagen">
                     <img src="./assets/img/proyectos/calculadora.png" alt="Proyecto-1">
                 </div>
                 <div class="informacion">
                     <p>Calculadora</p>
-                    <div class="caja-info"> 
+                    <div class="caja-info">
+                        <p>Primer proyecto donde implemento javascript, es una calculadora donde se pueden realizar las
+                            operaciones basicas</p>
                         <div class="skills-proyecto">
-                            <img src="./assets/img/html.svg" alt="HTML">
-                            <img src="./assets/img/css.svg" alt="CSS">
-                            <img src="./assets/img/javascript.svg" alt="JAVASCRIPT">
+                            <h6 class="html">HTML</h6>
+                            <h6 class="css">CSS</h6>
+                            <h6 class="javascript">JavaScript</h6>
+                            <div class="enlace">
+                                <a href="https://github.com/alexidev23/Calculadora" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-folder-open"
+                                        style="color: #ffffff;"></i></a>
+                                <a href="https://alexidev23.github.io/Calculadora/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-sharp fa-solid fa-globe"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
                         </div>
-                        <div id="abrir">
-                            <i class="fa-solid fa-plus"></i>
-                            <p class="info">mas info</p>
+                    </div>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="imagen">
+                    <img src="./assets/img/proyectos/encriptador.png" alt="Proyecto-1">
+                </div>
+                <div class="informacion">
+                    <p>Encriptador de Texto</p>
+                    <div class="caja-info">
+                        <p>Proyecto para el programa de One - Oracle Next Education; es un encriptador de texto y a su
+                            vez un desencriptador</p>
+                        <div class="skills-proyecto">
+                            <h6 class="html">HTML</h6>
+                            <h6 class="css">CSS</h6>
+                            <h6 class="javascript">JavaScript</h6>
+                            <div class="enlace">
+                                <a href="https://github.com/alexidev23/Encriptador-de-texto" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-folder-open"
+                                        style="color: #ffffff;"></i></a>
+                                <a href="https://alexidev23.github.io/Encriptador-de-texto/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-sharp fa-solid fa-globe"
+                                        style="color: #ffffff;"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="Contacto">
         <h2 id="Titulo">CONTACTO</h2>
         <div class="mis-redes">
             <div class="formulario">
                 <form action="https://formsubmit.co/alexisescobardev@gmail.com" method="POST" />
-                    <div class="forms">
-                        <div class="forms-input">
-                            <input type="text" placeholder="Ingrese su nombre" name="nombre">
-                        </div>
-                        <div class="forms-input">
-                            <input type="text" placeholder="Ingrese su apellido"  name="apellido">
-                        </div>
+                <div class="forms">
+                    <div class="forms-input">
+                        <input type="text" placeholder="Ingrese su nombre" name="nombre">
                     </div>
-                    <div class="form-input">
-                        <input type="email" placeholder="Ingrese su correo" name="email">
+                    <div class="forms-input">
+                        <input type="text" placeholder="Ingrese su apellido" name="apellido">
                     </div>
-                    <div class="form-textarea">
-                        <textarea name="comentario" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
-                    </div>
-                    <button type="submit" id="enviar" class="btnEnviar" value="Enviar" name="enviar">Enviar</button>
+                </div>
+                <div class="form-input">
+                    <input type="email" placeholder="Ingrese su correo" name="email">
+                </div>
+                <div class="form-textarea">
+                    <textarea name="comentario" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                </div>
+                <button type="submit" id="enviar" class="btnEnviar" value="Enviar" name="enviar">Enviar</button>
 
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#Contacto">
-                    <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#Contacto">
+                <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Modal Section -->
-
-    <dialog>
-        <h1>Calculadora</h1>
-        <div class="imgagen">
-            <img src="./assets/img/proyectos/calculadora.png" alt="">
-        </div>
-        <div class="caja-informacion">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In illum quas aspernatur accusantium, a praesentium tempore vero sunt, distinctio quisquam doloribus cum animi eveniet inventore illo blanditiis impedit, enim voluptatem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi pariatur nihil corrupti labore fugit, ex dicta quod perspiciatis sequi qui libero molestias soluta aliquam. Sed sint impedit non rerum sit!</p>
-        </div>
-        <div class="caja-links">
-            <p>Repositorio</p>
-            <p>Web</p>
-        </div>
-        <div id="salir"><i class="fa-solid fa-xmark"></i></div>
-    </dialog>
-
-    <script src="./js/script.js"></script>
     <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/scripts.js"></script>
 </body>
+
 </html>
