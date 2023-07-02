@@ -1,0 +1,165 @@
+/* Inicio */
+#Inicio {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-principal {
+  height: 350px;
+  border-radius: 4rem;
+}
+
+.contenedor-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nombre {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #609dfa;
+}
+
+.sub-titulo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #c8cdd0;
+}
+
+.redes {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.redes a {
+  display: flex;
+  text-decoration: none;
+  height: 35px;
+}
+
+.redes img:hover {
+  animation: myAnim 6ms ease 0ms infinite normal forwards;
+}
+
+.redes img {
+  height: 35px;
+  margin: auto;
+}
+
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  #Inicio {
+    height: 90vh;
+  }
+
+  .inicio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-principal {
+    border-radius: 100px;
+    width: 390px;
+    height: 420px;
+  }
+
+  .contenedor-titulo {
+    margin-top: 40px;
+  }
+
+  .nombre {
+    font-size: 5rem;
+  }
+
+  .sub-titulo {
+    font-size: 3rem;
+  }
+
+  .redes img {
+    height: 60px;
+  }
+
+  .redes img:hover {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #Inicio {
+    align-items: start;
+    padding-top: 120px;
+    height: 80vh;
+  }
+
+  .contenedor {
+    max-width: 390px;
+    justify-content: center;
+  }
+
+  .img-principal {
+    height: 280px;
+    border-radius: 100px;
+    margin-top: 30px;
+  }
+
+  .contenedor-titulo {
+    margin-top: 10px;
+  }
+
+  .nombre {
+    font-size: 2.4rem;
+  }
+
+  .sub-titulo {
+    font-size: 1.4rem;
+  }
+
+  .redes img {
+    height: 30px;
+  }
+
+  .redes img:hover {
+    animation: none;
+  }
+}
