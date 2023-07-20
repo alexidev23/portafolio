@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.inicio {
+  flex-wrap: nowrap;
+  gap: 30px;
+  width: auto;
+}
+
 .img-principal {
   height: 350px;
   border-radius: 4rem;
