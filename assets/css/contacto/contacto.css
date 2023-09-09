@@ -201,6 +201,7 @@ input:focus, textarea:focus{
 
   form {
     padding: 0;
+    width: 100%;
   }
 
   .form-input {
