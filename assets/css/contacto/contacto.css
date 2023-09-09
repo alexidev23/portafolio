@@ -215,6 +215,10 @@ input:focus, textarea:focus{
     font-size: 18px;
   }
 
+  .form-input label {
+    width:100%;
+  }
+  
   .form-input input::placeholder {
     font-size: 18px;
   }
