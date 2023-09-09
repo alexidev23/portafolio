@@ -141,6 +141,7 @@
   .contenedor {
     max-width: 390px;
     justify-content: center;
+    flex-direction: column;
   }
 
   .img-principal {
