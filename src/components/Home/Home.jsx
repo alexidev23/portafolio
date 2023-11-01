@@ -4,7 +4,7 @@ import { Redes } from './Redes'
 
 export function Home () {
   return (
-    <section name='Home' className='bg-background h-screen flex justify-center'>
+    <section name='Home' className='bg-background h-screen flex justify-center pt-20'>
       <div className='flex justify-center items-center my-auto flex-col xl:flex-row'>
         <div>
           <img alt='Foto de Alexis Escobar' src={Perfil} className='h-80 rounded-large mx-12 md:h-96' />
