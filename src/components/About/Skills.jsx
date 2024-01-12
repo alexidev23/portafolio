@@ -65,7 +65,7 @@ export function Skills () {
   ]
 
   return (
-    <ul className='flex gap-3 mt-5 justify-center'>
+    <ul className='flex gap-3 mt-5 justify-center flex-wrap'>
       {SkillsMe.map(skills => (
         <li key={skills.id}>
           {skills.name === 'DJANGO'
