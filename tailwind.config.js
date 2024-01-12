@@ -10,7 +10,7 @@ export default {
         poppins: ['Poppins', 'sans-serif']
       },
       width: {
-        min: '400px'
+        minSection: '600px'
       },
       colors: {
         background: '#01101b',
