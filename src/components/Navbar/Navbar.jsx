@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 export function Navbar () {
   const [nav, setNav] = useState(false)
   return (
-    <div className='flex justify-between items-center w-full h-20 fixed px-4 bg-background z-50'>
+    <header className='flex justify-between items-center w-full h-20 fixed px-4 bg-background z-50'>
       <div className='lg:mx-16 mx-4'>
         <Link to='Home' smooth duration={500} className='md:text-3xl text-2xl font-semibold text-links flex items-center cursor-default'>
           <img src={Logo} alt='Logo AlexisDev' className='w-10' />
@@ -36,6 +36,6 @@ export function Navbar () {
         </ul>
       )}
 
-    </div>
+    </header>
   )
 }
