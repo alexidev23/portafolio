@@ -72,25 +72,25 @@ export function Proyectos () {
     }
   }
   return (
-    <div className='flex flex-wrap h-full w-[1000px] justify-center gap-4 pb-16 xl:px-4 px-20'>
+    <div className='flex flex-wrap h-full w-[1000px] justify-center gap-10 pb-16'>
       {
         Proyectos.map(proyecto => (
-          <div key={proyecto.id} className='relative h-[300px] w-[320px] cursor-pointer rounded-xl overflow-hidden bg-contact'>
-            <img src={proyecto.imagen} className='w-auto' />
-            <div className='px-6 pt-2 text-white font-semibold'>
-              <h6 className='text-2xl'>{proyecto.name}</h6>
-              <p className='text-xs mt-1'>{proyecto.descripcion}</p>
-              <div>
-                <div className='flex gap-1 absolute left-6 bottom-4'>
+          <div key={proyecto.id} className='relative h-auto cursor-pointer overflow-hidden bg-contact w-[320px] xs:rounded-2xl'>
+            <img src={proyecto.imagen} className='w-auto aspect-auto' />
+            <div className='pt-4 text-white font-semibold px-4'>
+              <h6 className='text-3xl text-links'>{proyecto.name}</h6>
+              <p className='text-sm mt-3 font-normal'>{proyecto.descripcion}</p>
+              <div className='flex mt-10 mb-2 justify-between items-center'>
+                <div className='flex gap-1'>
                   {proyecto.tecnologias.map((tecnologia) => (
-                    <div key={tecnologia} className={`text-xs py-1 px-1.5 rounded-xl ${getBackgroundClass(tecnologia)}`}>{tecnologia}</div>
+                    <div key={tecnologia} className={`flex items-center justify-center rounded-xl px-2 text-xs font-medium h-8 ${getBackgroundClass(tecnologia)}`}>{tecnologia}</div>
                   ))}
                 </div>
-                <div className='mt-2 flex gap-1 absolute bottom-4 right-4'>
-                  <a target='_blank' href={proyecto.repositorio} rel='noreferrer'><FaFolderOpen className='text-xl' /></a>
+                <div className='mt-2 flex gap-4'>
+                  <a target='_blank' href={proyecto.repositorio} rel='noreferrer'><FaFolderOpen className='text-3xl' /></a>
                   {proyecto.pagina === ''
                     ? <a target='_blank' className='hidden' href={proyecto.pagina} rel='noreferrer'><BiWorld /></a>
-                    : <a target='_blank' href={proyecto.pagina} rel='noreferrer'><BiWorld className='text-xl' /></a>}
+                    : <a target='_blank' href={proyecto.pagina} rel='noreferrer'><BiWorld className='text-3xl' /></a>}
                 </div>
               </div>
             </div>

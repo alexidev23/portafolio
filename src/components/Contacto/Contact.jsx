@@ -23,7 +23,7 @@ export function Contacto () {
   return (
     <section name='Contacto' className='bg-background w-full flex flex-col justify-center items-center'>
       <h2 className='text-center text-4xl font-bold uppercase text-links pt-20 mb-4'>Contacto</h2>
-      <div className='bg-contact flex mb-20 rounded-2xl px-2 py-8 gap-4 w-[400px] xl:w-[800px]'>
+      <div className='bg-contact flex mb-20 sm:rounded-2xl px-2 py-8 gap-4 w-full xl:w-[800px]'>
         <div className='xl:w-[400px] w-full px-2'>
           <form ref={form} onSubmit={sendEmail} id='contact-form' method='post' className='xl:ml-10 text-white'>
             <div className='flex flex-col gap-5'>
