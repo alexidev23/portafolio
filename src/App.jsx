@@ -6,12 +6,12 @@ import { Portafolio } from './components/Portafolio/Portfolio'
 
 export function App () {
   return (
-    <div>
+    <>
       <Navbar />
       <Home />
       <About />
       <Portafolio />
       <Contacto />
-    </div>
+    </>
   )
 }
