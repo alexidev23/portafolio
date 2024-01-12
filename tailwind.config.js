@@ -9,8 +9,11 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
       },
+      width: {
+        min: '400px'
+      },
       colors: {
-        background: '#192229',
+        background: '#01101b',
         links: '#609dfa',
         card: '#142937',
         contact: '#142c3c',
