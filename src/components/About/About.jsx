@@ -6,7 +6,7 @@ export function About () {
   return (
     <section
       name='Sobre mi'
-      className='py-20 flex items-center flex-col justify-center sm:w-minSection sm:m-auto lg:w-[800px]'
+      className='py-20 flex items-center flex-col justify-center sm:w-minSection sm:m-auto lg:w-[800px] xl:h-screen'
     >
       <h2 className='text-center text-4xl font-bold uppercase text-links'>Sobre mi</h2>
       <div className='flex w-auto pt-10'>

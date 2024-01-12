@@ -72,21 +72,21 @@ export function Proyectos () {
     }
   }
   return (
-    <div className='grid lg:grid-cols-2 justify-items-center h-full xl:w-[1000px] gap-10 pb-16'>
+    <div className='grid lg:grid-cols-2 justify-items-center h-full gap-10 pb-16'>
       {
         Proyectos.map(proyecto => (
-          <div key={proyecto.id} className='relative h-auto cursor-pointer overflow-hidden bg-contact w-[320px] xs:rounded-2xl'>
+          <div key={proyecto.id} className='relative cursor-pointer overflow-hidden bg-contact w-[320px] xs:rounded-2xl h-[350px]'>
             <img src={proyecto.imagen} className='w-auto aspect-auto' />
             <div className='pt-4 text-white font-semibold px-4'>
               <h6 className='text-3xl text-links'>{proyecto.name}</h6>
               <p className='text-sm mt-3 font-normal'>{proyecto.descripcion}</p>
-              <div className='flex mt-10 mb-2 justify-between items-center'>
+              <div className='flex items-center absolute bottom-4 w-[288px]'>
                 <div className='flex gap-1'>
                   {proyecto.tecnologias.map((tecnologia) => (
                     <div key={tecnologia} className={`flex items-center justify-center rounded-xl px-2 text-xs font-medium h-8 ${getBackgroundClass(tecnologia)}`}>{tecnologia}</div>
                   ))}
                 </div>
-                <div className='mt-2 flex gap-4'>
+                <div className='mt-2 flex gap-4 absolute right-0'>
                   <a target='_blank' href={proyecto.repositorio} rel='noreferrer'><FaFolderOpen className='text-3xl' /></a>
                   {proyecto.pagina === ''
                     ? <a target='_blank' className='hidden' href={proyecto.pagina} rel='noreferrer'><BiWorld /></a>
