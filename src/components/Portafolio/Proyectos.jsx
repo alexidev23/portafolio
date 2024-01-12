@@ -72,7 +72,7 @@ export function Proyectos () {
     }
   }
   return (
-    <div className='flex flex-wrap h-full w-[1000px] justify-center gap-10 pb-16'>
+    <div className='grid lg:grid-cols-2 justify-items-center h-full xl:w-[1000px] gap-10 pb-16'>
       {
         Proyectos.map(proyecto => (
           <div key={proyecto.id} className='relative h-auto cursor-pointer overflow-hidden bg-contact w-[320px] xs:rounded-2xl'>

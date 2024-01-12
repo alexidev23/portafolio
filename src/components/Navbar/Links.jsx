@@ -24,7 +24,7 @@ export function Links () {
   return (
     <>
       {links.map(link => (
-        <li key={link.id} className='text-links px-4 cursor-pointer uppercase text-xl font-bold hover:text-gray-200 duration-200'>
+        <li key={link.id} className='text-links px-4 cursor-pointer uppercase text-xl lg:text-lg font-bold hover:text-gray-200 duration-200'>
           <Link to={link.name} smooth duration={500} className='hover:border-b-2'>{link.name}</Link>
         </li>
       ))}

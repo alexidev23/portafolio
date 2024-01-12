@@ -4,8 +4,8 @@ import { Redes } from './Redes'
 
 export function Home () {
   return (
-    <section name='Home' className='h-auto flex justify-center pt-24 w-full sm:w-minSection sm:m-auto'>
-      <div className='flex justify-center items-center my-auto flex-col lg:flex-row'>
+    <section name='Home' className='h-auto flex justify-center pt-24 w-full sm:w-minSection sm:m-auto lg:w-[800px] lg:py-24'>
+      <div className='flex justify-center items-center my-auto flex-col lg:flex-row lg:gap-24'>
         <div>
           <img alt='Foto de Alexis Escobar' src={Perfil} className='h-80 rounded-large' />
         </div>

@@ -8,20 +8,20 @@ export function Navbar () {
   const [nav, setNav] = useState(false)
   return (
     <header className='flex justify-between items-center w-full h-20 fixed px-4 bg-background z-50'>
-      <div className='lg:mx-16 mx-4'>
-        <Link to='Home' smooth duration={500} className='md:text-3xl text-2xl font-semibold text-links flex items-center cursor-default'>
-          <img src={Logo} alt='Logo AlexisDev' className='w-10' />
+      <div className='mx-4 lg:mx-8'>
+        <Link to='Home' smooth duration={500} className='text-2xl font-semibold text-links flex items-center cursor-default'>
+          <img src={Logo} alt='Logo AlexisDev' className='w-10 lg:w-8' />
           AlexisDev
         </Link>
       </div>
 
-      <ul className='hidden xl:flex mx-16'>
+      <ul className='hidden lg:flex lg:mx-8'>
         <Links />
       </ul>
 
       <div
         onClick={() => setNav(!nav)}
-        className='cursor-pointer pr-4 z-10 xl:hidden'
+        className='cursor-pointer pr-4 z-10 lg:hidden'
       >
         {
         nav
