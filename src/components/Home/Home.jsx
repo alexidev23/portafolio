@@ -4,14 +4,14 @@ import { Redes } from './Redes'
 
 export function Home () {
   return (
-    <section name='Home' className='bg-background h-screen flex justify-center pt-20'>
-      <div className='flex justify-center items-center my-auto flex-col xl:flex-row'>
+    <section name='Home' className='h-auto flex justify-center pt-24 w-full'>
+      <div className='flex justify-center items-center my-auto flex-col lg:flex-row'>
         <div>
-          <img alt='Foto de Alexis Escobar' src={Perfil} className='h-80 rounded-large mx-12 md:h-96' />
+          <img alt='Foto de Alexis Escobar' src={Perfil} className='h-80 rounded-large' />
         </div>
         <div className='my-10 flex flex-col justify-center items-center'>
           <h2
-            className='sm:text-6xl text-5xl font-bold text-links'
+            className='text-5xl font-bold text-links text-center'
           >
             Alexis Escobar
           </h2>
