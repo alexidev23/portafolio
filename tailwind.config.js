@@ -29,6 +29,9 @@ export default {
       },
       borderRadius: {
         large: '100px'
+      },
+      screens: {
+        xs: '370px'
       }
     }
   },
