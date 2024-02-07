@@ -76,7 +76,7 @@ export function Proyectos () {
       {
         Proyectos.map(proyecto => (
           <div key={proyecto.id} className='relative cursor-pointer overflow-hidden bg-contact w-[320px] xs:rounded-2xl h-[350px]'>
-            <img src={proyecto.imagen} className='w-auto aspect-auto' />
+            <img src={proyecto.imagen} alt={proyecto.name} className='w-auto aspect-auto' />
             <div className='pt-4 text-white font-semibold px-4'>
               <h6 className='text-3xl text-links'>{proyecto.name}</h6>
               <p className='text-sm mt-3 font-normal'>{proyecto.descripcion}</p>

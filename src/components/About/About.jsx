@@ -11,7 +11,7 @@ export function About () {
       <h2 className='text-center text-4xl font-bold uppercase text-links'>Sobre mi</h2>
       <div className='flex w-auto pt-10'>
         <div>
-          <img alt='Foto de Alexis Escobar' src={Perfil} className='hidden lg:flex lg:rounded-large lg:w-96' />
+          <img src={Perfil} alt='Foto de Alexis Escobar' className='hidden lg:flex lg:rounded-large lg:w-96' />
         </div>
         <div className='w-full mx-8 my-5 text-balance lg:ml-4 lg:mr-0 lg:px-10'>
           <p className='text-white font-medium text-xl'>

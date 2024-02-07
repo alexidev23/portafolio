@@ -30,10 +30,10 @@ export function Redes () {
         Social.map(social => (
           <li key={social.id} className='rounded-full hover:animate-jump '>
             <a
-              target='_blank'
               href={social.url} rel='noreferrer'
+              target='_blank'
             >
-              <img src={social.icon} className='h-9' />
+              <img src={social.icon} alt={social.name} className='h-9' />
             </a>
 
           </li>

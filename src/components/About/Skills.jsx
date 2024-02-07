@@ -70,7 +70,7 @@ export function Skills () {
         <li key={skills.id}>
           {skills.name === 'DJANGO'
             ? <div className='bg-[#144b34] h-8 flex items-center justify-center px-1 rounded-md'><span className='text-white font-medium'>Django</span></div>
-            : <img alt={skills.name} src={skills.icon} className='h-8' />}
+            : <img src={skills.icon} alt={skills.name} className='h-8' />}
         </li>
       ))}
     </ul>
