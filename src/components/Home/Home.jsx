@@ -16,7 +16,12 @@ export function Home () {
             Alexis Escobar
           </h2>
           <h4 className='text-3xl font-bold text-white text-center my-4'>Desarrollador Web</h4>
-          <Redes />
+          <div className='flex gap-4 items-center justify-center'>
+            <Redes />
+            <a href='https://drive.google.com/file/d/18LunZtdNAgxy--aEpc6zxS7Gm-fLx4rW/view?usp=sharing' target='_blank' rel='noreferrer' className='bg-blue-700 text-white h-9 w-12 flex items-center justify-center rounded-xl hover:bg-blue-900'>
+              CV
+            </a>
+          </div>
         </div>
       </div>
     </section>
