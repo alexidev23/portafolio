@@ -15,11 +15,11 @@ export function Home () {
         </div>
         <div className=' flex flex-col'>
           <h1
-            className='text-5xl font-bold text-links'
+            className='text-5xl font-bold text-white'
           >
             Alexis Escobar
           </h1>
-          <p className='text-lg text-white my-4'><span className='text-yellow-400'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
+          <p className='text-lg text-white my-4'><span className='text-[#37B3F9]'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
           <div className='flex gap-4 items-center justify-center'>
             <Redes />
           </div>
