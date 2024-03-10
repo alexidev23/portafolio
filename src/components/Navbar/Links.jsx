@@ -2,18 +2,18 @@ export function Links () {
   const links = [
     {
       id: 1,
-      url: '#home',
-      name: 'Home'
+      url: '#experiencia',
+      name: 'Experiencia'
     },
     {
       id: 2,
-      url: '#sobreMi',
-      name: 'Sobre mi'
+      url: '#proyectos',
+      name: 'Proyectos'
     },
     {
       id: 3,
-      url: '#proyectos',
-      name: 'Proyectos'
+      url: '#sobreMi',
+      name: 'Sobre Mi'
     },
     {
       id: 4,
