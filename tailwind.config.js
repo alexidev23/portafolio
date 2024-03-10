@@ -14,7 +14,9 @@ export default {
       },
       colors: {
         background: '#01101b',
+        navbar: '#01233C',
         links: '#609dfa',
+        texto: '#1C76FF',
         card: '#142937',
         contact: '#142c3c',
         inputs: '#234063',
