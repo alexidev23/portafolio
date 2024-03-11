@@ -17,8 +17,8 @@ export function Home () {
           <h1 className='lg:text-5xl text-4xl xs:text-center font-bold text-white'>
             Alexis Escobar
           </h1>
-          <p className='text-lg text-white mt-4'><span className='text-[#37B3F9]'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
-          <p className='text-lg text-white'>Actualmente egresado de Teclab como Técnico superior en Programación.</p>
+          <p className='text-lg text-white mt-4 xs:mx-4'><span className='text-[#37B3F9]'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
+          <p className='text-lg text-white xs:mx-4'>Actualmente egresado de Teclab como Técnico superior en Programación.</p>
           <div>
             <Redes />
           </div>
