@@ -7,7 +7,7 @@ export function Experiencia () {
         <Porfolio />
         <h2 className='text-3xl font-bold uppercase text-links'>Experiencia Laboral</h2>
       </div>
-      <div>
+      <div className='pb-10'>
         <div className='flex'>
           <div className='w-10 relative'>
             <span className='w-3 h-3 bg-cyan-400 rounded-full absolute left-[15px] top-[12px] z-10' />
@@ -19,8 +19,8 @@ export function Experiencia () {
               <h4 className='text-lg font-extralight'>ARGEC - It Consulting</h4>
               <h6 className='text-xs text-gray-400'>07/2023 - 12/2023</h6>
             </div>
-            <div className='text-gray-300'>
-              <p>Lidere el desarrollo de la pagina de la empresa</p>
+            <div className='text-gray-300 w-[400px]'>
+              <p>Lidere el desarrollo de la pagina de la empresa, utilizando react y tailwind para el frontend y php para el backend.</p>
             </div>
           </div>
         </div>
