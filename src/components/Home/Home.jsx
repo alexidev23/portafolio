@@ -14,13 +14,12 @@ export function Home () {
           <span className='bg-green-950 text-green-500 px-2 py-1 rounded-full text-xs'>Disponible para trabajar</span>
         </div>
         <div className=' flex flex-col'>
-          <h1
-            className='text-5xl font-bold text-white'
-          >
+          <h1 className='text-5xl font-bold text-white'>
             Alexis Escobar
           </h1>
-          <p className='text-lg text-white my-4'><span className='text-[#37B3F9]'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
-          <div className='flex gap-4 items-center justify-center'>
+          <p className='text-lg text-white mt-4'><span className='text-[#37B3F9]'>Desarrollador web Junior</span> de Cordoba, Argentina.</p>
+          <p className='text-lg text-white'>Actualmente egresado de Teclab como Técnico superior en Programación.</p>
+          <div className='flex gap-4 mt-6'>
             <Redes />
           </div>
         </div>
