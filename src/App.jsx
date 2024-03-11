@@ -1,4 +1,4 @@
-import { About } from './components/About/About'
+// import { About } from './components/About/About'
 import { Contacto } from './components/Contacto/Contact'
 import { Experiencia } from './components/Experiencia/Experiencia'
 import { Home } from './components/Home/Home'
@@ -12,7 +12,7 @@ export function App () {
       <Home />
       <Experiencia />
       <Portafolio />
-      <About />
+      {/* <About /> */}
       <Contacto />
     </>
   )
