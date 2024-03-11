@@ -5,7 +5,7 @@ import Javascript from '../../assets/img/javascript.svg'
 import Python from '../../assets/img/python.svg'
 import Django from '../../assets/img/django.svg'
 import Bootstrap from '../../assets/img/bootstrap.svg'
-import Git from '../../assets/img/git.svg'
+// import Git from '../../assets/img/git.svg'
 // import Php from '../../assets/img/php.svg'
 // import Reac from '../../assets/react.svg'
 // import Tailwind from '../../assets/img/tailwindcss.svg'
@@ -41,12 +41,12 @@ export function Skills () {
       id: 6,
       name: 'BOOSTRAP',
       icon: Bootstrap
-    },
-    {
-      id: 7,
-      name: 'GIT',
-      icon: Git
     }
+    // {
+    //   id: 7,
+    //   name: 'GIT',
+    //   icon: Git
+    // }
     // {
     //   id: 8,
     //   name: 'PHP',

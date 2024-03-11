@@ -25,7 +25,7 @@ export function Redes () {
     }
   ]
   return (
-    <ul className='flex gap-4 mt-2 justify-center'>
+    <div className='flex gap-4 xs:gap-1 mt-2 justify-center'>
       {
         Social.map(social => (
           <a
@@ -36,7 +36,7 @@ export function Redes () {
             className='bg-white h-6 px-2 flex gap-1 items-center justify-center rounded-full hover:animate-jump hover:animate-once hover:animate-duration-500 hover:animate-ease-in-out'
           >
             {/* Hacer que si no tiene icono no se vea */}
-            {social.icon && <img src={social.icon} alt={social.name} className='h-4' />}
+            {social.icon && <img src={social.icon} alt={`Icono de ${social.name}`} className='h-4' />}
             <span>{social.name}</span>
             <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='h-3'>
               <path strokeLinecap='round' strokeLinejoin='round' d='m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25' />
@@ -44,6 +44,6 @@ export function Redes () {
           </a>
         ))
       }
-    </ul>
+    </div>
   )
 }

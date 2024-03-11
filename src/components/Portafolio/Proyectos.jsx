@@ -41,29 +41,29 @@ export function Proyectos () {
   ]
 
   return (
-    <div className='flex lg:flex-col justify-items-center h-full gap-10 pb-16'>
+    <div className='flex flex-col justify-items-center h-full gap-10 pb-16'>
       {
         Proyectos.map(proyecto => (
-          <div key={proyecto.id} className='w-[750px] h-[200px] flex p-4 gap-10 rounded-3xl bg-contact'>
-            <div className='w-[310px] h-[140px] rounded-2xl overflow-hidden m-auto'>
+          <div key={proyecto.id} className='w-full lg:w-[750px] h-[200px] xs:h-[320px] flex xs:flex-col lg:p-4 lg:gap-10 lg:rounded-3xl bg-contact'>
+            <div className='lg:w-[310px] lg:h-[140px] lg:rounded-2xl overflow-hidden m-auto'>
               <img src={proyecto.imagen} alt={proyecto.name} className='w-full h-full' />
             </div>
-            <div className='relative w-[420px]'>
-              <h3 className='text-2xl font-semibold text-links pb-1'>{proyecto.name}</h3>
-              <p className='text-gray-400 text-sm'>{proyecto.descripcion}</p>
-              <div className='absolute bottom-0 flex justify-between w-full'>
+            <div className='relative lg:w-[420px] xs:h-[160px]'>
+              <h3 className='text-2xl font-semibold text-links pb-1 xs:pl-2'>{proyecto.name}</h3>
+              <p className='text-gray-400 text-sm xs:pl-2'>{proyecto.descripcion}</p>
+              <div className='absolute bottom-2 flex lg:justify-between xs:justify-around w-full'>
                 <div className='flex items-center justify-center'>
                   {proyecto.tecnologias.map((tecnologia, index) => (
                     <div key={index} className='flex items-center justify-center rounded-xl px-2 text-xs font-medium h-5'>
-                      <img src={tecnologia} className='w-full h-full' />
+                      <img src={tecnologia} alt='Icono de teccnologia' className='w-full h-full' />
                     </div>
                   ))}
                 </div>
-                <div className='flex gap-4'>
-                  <a target='_blank' href={proyecto.repositorio} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Code} className='h-4' />Code</a>
+                <div className='flex gap-4 xs:gap-1'>
+                  <a target='_blank' href={proyecto.repositorio} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Code} className='h-4' alt='Icono Code proyecto' />Code</a>
                   {proyecto.pagina === ''
                     ? ''
-                    : <a target='_blank' href={proyecto.pagina} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Link} className='h-4' />Demo</a>}
+                    : <a target='_blank' href={proyecto.pagina} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Link} className='h-4' alt='Icono Demo' />Demo</a>}
                 </div>
               </div>
             </div>
