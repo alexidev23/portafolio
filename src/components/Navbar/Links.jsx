@@ -10,13 +10,13 @@ export function Links () {
       url: '#proyectos',
       name: 'Proyectos'
     },
+    // {
+    //   id: 3,
+    //   url: '#sobreMi',
+    //   name: 'Sobre Mi'
+    // },
     {
       id: 3,
-      url: '#sobreMi',
-      name: 'Sobre Mi'
-    },
-    {
-      id: 4,
       url: '#contacto',
       name: 'Contacto'
     }
