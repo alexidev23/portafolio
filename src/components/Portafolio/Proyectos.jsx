@@ -44,14 +44,14 @@ export function Proyectos () {
     <div className='flex flex-col justify-items-center h-full gap-10 pb-16'>
       {
         Proyectos.map(proyecto => (
-          <div key={proyecto.id} className='w-full lg:w-[750px] h-[200px] xs:h-[320px] flex xs:flex-col lg:p-4 lg:gap-10 lg:rounded-3xl bg-contact'>
-            <div className='lg:w-[310px] lg:h-[140px] lg:rounded-2xl overflow-hidden m-auto'>
+          <div key={proyecto.id} className='w-full lg:w-[750px] sm:h-[200px] xs:h-[320px] flex xs:flex-col sm:flex-row sm:p-4 sm:gap-10 sm:rounded-3xl bg-contact'>
+            <div className='lg:w-[310px] sm:w-[310px] lg:h-[140px] sm:rounded-2xl overflow-hidden m-auto'>
               <img src={proyecto.imagen} alt={proyecto.name} className='w-full h-full' />
             </div>
-            <div className='relative lg:w-[420px] xs:h-[160px]'>
+            <div className='relative lg:w-[420px] xs:h-[160px] sm:w-[400px]'>
               <h3 className='text-2xl font-semibold text-links pb-1 xs:pl-2'>{proyecto.name}</h3>
               <p className='text-gray-400 text-sm xs:pl-2'>{proyecto.descripcion}</p>
-              <div className='absolute bottom-2 flex lg:justify-between xs:justify-around w-full'>
+              <div className='absolute bottom-2 flex sm:justify-between xs:justify-around w-full'>
                 <div className='flex items-center justify-center'>
                   {proyecto.tecnologias.map((tecnologia, index) => (
                     <div key={index} className='flex items-center justify-center rounded-xl px-2 text-xs font-medium h-5'>

@@ -25,7 +25,7 @@ export function Redes () {
     }
   ]
   return (
-    <div className='flex gap-4 xs:gap-1 mt-2 justify-center'>
+    <div className='flex gap-4 xs:gap-1 mt-2 xs:justify-center sm:justify-normal'>
       {
         Social.map(social => (
           <a
@@ -38,7 +38,7 @@ export function Redes () {
             {/* Hacer que si no tiene icono no se vea */}
             {social.icon && <img src={social.icon} alt={`Icono de ${social.name}`} className='h-4' />}
             <span>{social.name}</span>
-            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='h-3'>
+            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='h-3 xs:hidden sm:flex'>
               <path strokeLinecap='round' strokeLinejoin='round' d='m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25' />
             </svg>
           </a>

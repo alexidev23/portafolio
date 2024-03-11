@@ -23,10 +23,10 @@ export function Contacto () {
       })
   }
   return (
-    <section id='contacto' className='lg:w-[800px] w-full sm:m-auto'>
+    <section id='contacto' className='lg:w-[800px] sm:w-[700px] w-full sm:m-auto'>
       <h2 className='text-4xl font-bold uppercase text-links pt-20 mb-8 xs:pl-2'>Contacto</h2>
-      <div className='bg-contact flex mb-20 px-2 py-4 gap-4 w-full lg:w-[750px] sm:rounded-2xl'>
-        <div className='w-full lg:w-[400px] px-2'>
+      <div className='bg-contact flex mb-20 px-2 py-4 gap-4 w-full lg:w-[750px] sm:w-full sm:rounded-2xl'>
+        <div className='w-full sm:w-[380px] lg:w-[400px] px-2'>
           <form ref={form} onSubmit={sendEmail} id='contact-form' method='post' className='text-white'>
             <div className='flex flex-col gap-2'>
               <div className='flex flex-col'>
@@ -45,7 +45,7 @@ export function Contacto () {
             <button type='submit' className='mt-4 rounded-2xl h-[42px] w-full bg-btnEnviar duration-200 hover:bg-blue-500 text-white text-xl font-semibold uppercase'>Enviar</button>
           </form>
         </div>
-        <div className='h-96 lg:flex hidden'>
+        <div className='h-96 sm:flex hidden'>
           <img src={Formulario} alt='Formulario de Contacto' className='h-full' />
         </div>
       </div>
