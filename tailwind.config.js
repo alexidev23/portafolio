@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif']
-      },
       width: {
         minSection: '600px'
       },
@@ -23,11 +20,11 @@ export default {
         btnEnviar: '#0c3e77',
         html: '#ec5f31',
         css: '#1170ad',
-        javascript: '#f0d53c',
-        pythonBlue: '#326c96',
-        pythonYellow: '#f6d566',
-        django: '#153528',
-        bootstrap: '#6e2eeb'
+        javascript: '#f0d53c'
+        // pythonBlue: '#326c96',
+        // pythonYellow: '#f6d566',
+        // django: '#153528',
+        // bootstrap: '#6e2eeb'
       },
       borderRadius: {
         large: '100%'
