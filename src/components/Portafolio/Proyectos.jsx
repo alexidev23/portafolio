@@ -1,73 +1,46 @@
-import Calculadora from '../../assets/img/proyectos/calculadora.avif'
-import Encriptador from '../../assets/img/proyectos/encriptador.webp'
-import TicTacToe from '../../assets/img/proyectos/tictactoe.avif'
-import Html from '../../assets/img/html5.svg'
-import Css from '../../assets/img/css.svg'
-import JavaScript from '../../assets/img/javascript.svg'
-import React from '../../assets/img/react.svg'
-import Tailwind from '../../assets/img/tailwindcss.svg'
-import Code from '../../assets/img/code.svg'
-import Link from '../../assets/img/link.svg'
+/* eslint-disable react/jsx-closing-tag-location */
+import { MisProyectos } from '../../constants/constants'
+import File from '../../assets/file.svg'
+import { IconLink } from '../Icons/IconLink'
 
 export function Proyectos () {
-  const Proyectos = [
-    {
-      id: 1,
-      name: 'Calculadora',
-      descripcion: 'Primer proyecto donde implemento JavaScript, es una calculadora donde se pueden realizar las operaciones básicas.',
-      imagen: Calculadora,
-      tecnologias: [Html, Css, JavaScript],
-      repositorio: 'https://github.com/alexidev23/Calculadora',
-      pagina: 'https://alexidev23.github.io/Calculadora/'
-    },
-    {
-      id: 2,
-      name: 'Encriptador de Texto',
-      descripcion: 'Proyecto para el programa de One - Oracle Next Education; es un encriptador de texto y a su vez un desencriptador.',
-      imagen: Encriptador,
-      tecnologias: [Html, Css, JavaScript],
-      repositorio: 'https://github.com/alexidev23/Encriptador-de-texto',
-      pagina: 'https://alexidev23.github.io/Encriptador-de-texto/'
-    },
-    {
-      id: 3,
-      name: 'Tic-Tac-Toe',
-      descripcion: 'Primer proyecto utilizando react y tailwind, idea sacada del canal de midudev.',
-      imagen: TicTacToe,
-      tecnologias: [React, Tailwind],
-      repositorio: 'https://github.com/alexidev23/Tic-Tac-Toe',
-      pagina: 'https://tic-tac-toe-brown-one.vercel.app/'
-    }
-  ]
-
   return (
     <div className='flex flex-col justify-items-center h-full gap-10 pb-16'>
       {
-        Proyectos.map(proyecto => (
-          <div key={proyecto.id} className='w-full lg:w-[750px] sm:h-[200px] xs:h-[320px] flex xs:flex-col sm:flex-row sm:p-4 sm:gap-10 sm:rounded-3xl bg-contact'>
-            <div className='lg:w-[310px] sm:w-[310px] lg:h-[140px] sm:rounded-2xl overflow-hidden m-auto'>
-              <img src={proyecto.imagen} alt={proyecto.name} className='w-full h-full' />
-            </div>
-            <div className='relative lg:w-[420px] xs:h-[160px] sm:w-[400px]'>
-              <h3 className='text-2xl font-semibold text-links pb-1 xs:pl-2'>{proyecto.name}</h3>
-              <p className='text-gray-400 text-sm xs:pl-2'>{proyecto.descripcion}</p>
-              <div className='absolute bottom-2 flex sm:justify-between xs:justify-around w-full'>
-                <div className='flex items-center justify-center'>
-                  {proyecto.tecnologias.map((tecnologia, index) => (
-                    <div key={index} className='flex items-center justify-center rounded-xl px-2 text-xs font-medium h-5'>
-                      <img src={tecnologia} alt='Icono de teccnologia' className='w-full h-full' />
-                    </div>
-                  ))}
-                </div>
-                <div className='flex gap-4 xs:gap-1'>
-                  <a target='_blank' href={proyecto.repositorio} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Code} className='h-4' alt='Icono Code proyecto' />Code</a>
-                  {proyecto.pagina === ''
-                    ? ''
-                    : <a target='_blank' href={proyecto.pagina} rel='noreferrer' className='flex text-white gap-2 border py-1 px-3 rounded-3xl text-sm items-center justify-center bg-teal-950'><img src={Link} className='h-4' alt='Icono Demo' />Demo</a>}
-                </div>
+        MisProyectos.map(({ id, name, descripcion, imagen, tecnologias, repositorio, pagina }) => (
+          <article className='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0' key={id}>
+            <div className='w-full md:w-1/2'>
+              <div className='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-2 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
+                <img alt={name} className='object-cover object-top w-full h-56 sm:h-full' loading='lazy' src={imagen} />
               </div>
             </div>
-          </div>
+
+            <div className='w-full md:w-1/2 md:max-w-lg'>
+              <div className='flex items-center h-8 gap-4'>
+                <h3 className='text-2xl font-bold text-gray-800 dark:text-gray-100'>
+                  {name}
+                </h3>
+                <ul className='flex items-center'>
+                  {tecnologias.map((tecnologia, index) => (
+                    <li key={index} className='flex items-center justify-center rounded-xl px-2 text-xs font-medium h-5'>
+                      <img src={tecnologia} alt='Icono de teccnologia' className='w-full h-full' />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className='flex flex-wrap mt-1'>
+                <div className='mt-2 text-gray-700 dark:text-gray-400'>{descripcion}</div>
+                <footer className='flex items-end justify-start mt-4 gap-x-4'>
+                  <a target='_blank' href={repositorio} rel='noreferrer' className='flex text-white gap-2 py-2 px-5 rounded-3xl text-sm items-center justify-center bg-cyan-900/45'><img src={File} className='h-4' alt='Icono Code proyecto' />Code</a>
+                  {pagina === ''
+                    ? ''
+                    : <a target='_blank' href={pagina} rel='noreferrer' className='flex text-white gap-2 py-2 px-5 rounded-3xl text-sm items-center justify-center bg-cyan-900/45'>
+                      <IconLink />
+                      Demo</a>}
+                </footer>
+              </div>
+            </div>
+          </article>
         ))
       }
     </div>
