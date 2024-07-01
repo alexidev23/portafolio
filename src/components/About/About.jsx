@@ -13,9 +13,15 @@ export function About () {
         <h2 className='text-4xl font-bold uppercase text-links'>Sobre mi</h2>
       </div>
       <div className='flex w-auto pt-6'>
-        <div className='w-full text-balance'>
-          <p className='text-white font-medium text-xl'>
-            Soy una persona apasionada al aprendizaje y nuevas tecnologías, actualmente estoy estudiando una tecnicatura en programación y estoy en busca de trabajo donde pueda demostrar mis habilidades y pueda adquirir experiencia y nuevos conocimientos.
+        <div className='w-full text-balance flex flex-col gap-4 mt-5'>
+          <p className='text-white font-medium text-sm w-[500px] text-balance'>
+            Me llamo Alexis Escobar, tengo 23 años y en 2023 me recibí como Técnico Superior en Programación en Teclab Intituto Tecnico Superior donde realicé una práctica profesionalizante en Argec - It consulting.
+          </p>
+          <p className='text-white font-medium text-sm w-[500px] text-balance'>
+            Actualmente estoy aprendiendo de forma autodidacta React y Tailwind, además estoy realizando un curso de Testing QA Manual en Coderhouse.
+          </p>
+          <p className='text-white font-medium text-sm w-[500px] text-balance'>
+            Estoy en búsqueda de trabajo como Desarrollador Frontend, QA Manual que es lo que más me gusta, pero tampoco estoy cerrado a otros puestos.
           </p>
         </div>
         <div>
