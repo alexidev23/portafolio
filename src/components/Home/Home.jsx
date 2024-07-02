@@ -7,7 +7,7 @@ export function Home () {
   return (
     <section
       id='home'
-      className='h-auto flex pt-4 w-full sm:m-auto lg:w-[800px] sm:w-[700px] lg:pb-20  lg:pt-10 lg:mt-14'
+      className='h-auto flex w-full sm:m-auto lg:w-[800px] sm:w-[700px] lg:py-24'
     >
       <div className='my-auto gap-10'>
         <div className='flex items-center lg:gap-2 gap-4 mb-2'>

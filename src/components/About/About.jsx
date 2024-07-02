@@ -6,7 +6,7 @@ export function About () {
   return (
     <section
       id='sobreMi'
-      className='py-20 flex flex-col sm:w-minSection sm:m-auto lg:w-[800px] xl:h-screen'
+      className='py-24 flex flex-col sm:w-minSection sm:m-auto lg:w-[800px]'
     >
       <div className='flex gap-2'>
         <IconUser />
@@ -15,7 +15,7 @@ export function About () {
       <div className='flex w-auto pt-6'>
         <div className='w-full text-balance flex flex-col gap-4 mt-5'>
           <p className='text-white font-medium text-sm w-[500px] text-balance'>
-            Me llamo Alexis Escobar, tengo 23 años y en 2023 me recibí como Técnico Superior en Programación en Teclab Intituto Tecnico Superior donde realicé una práctica profesionalizante en Argec - It consulting.
+            Me llamo Alexis Escobar, tengo 23 años y en 2023 me recibí como <span className='text-sky-400'>Técnico Superior en Programación</span> en Teclab Instituto Técnico Superior donde realicé una práctica profesionalizante en ARGEC - It consulting.
           </p>
           <p className='text-white font-medium text-sm w-[500px] text-balance'>
             Actualmente estoy aprendiendo de forma autodidacta React y Tailwind, además estoy realizando un curso de Testing QA Manual en Coderhouse.
@@ -25,7 +25,7 @@ export function About () {
           </p>
         </div>
         <div>
-          <img src={Perfil} alt='Foto de Alexis Escobar' className='hidden lg:flex rounded-3xl lg:w-80' />
+          <img src={Perfil} alt='Foto de Alexis Escobar' className='rounded-3xl lg:w-80' />
         </div>
       </div>
     </section>

@@ -18,23 +18,27 @@ import Tailwind from '../assets/tailwindcss.svg'
 export const linksNavBar = [
   {
     id: 1,
-    url: '#experiencia',
-    name: 'Experiencia'
+    name: 'Experiencia',
+    label: 'experiencia',
+    url: '#experiencia'
   },
   {
     id: 2,
-    url: '#proyectos',
-    name: 'Proyectos'
+    name: 'Proyectos',
+    label: 'proyectos',
+    url: '#proyectos'
   },
-  // {
-  //   id: 3,
-  //   url: '#sobreMi',
-  //   name: 'Sobre Mi'
-  // },
   {
     id: 3,
-    url: '#contacto',
-    name: 'Contacto'
+    name: 'Sobre Mi',
+    label: 'sobreMi',
+    url: '#sobreMi'
+  },
+  {
+    id: 4,
+    name: 'Contacto',
+    label: 'contacto',
+    url: 'mailto:alexisescobardev@gmail.com'
   }
 ]
 

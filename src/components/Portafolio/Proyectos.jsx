@@ -5,10 +5,13 @@ import { IconLink } from '../Icons/IconLink'
 
 export function Proyectos () {
   return (
-    <div className='flex flex-col justify-items-center h-full gap-10 pb-16'>
+    <div className='flex flex-col justify-items-center h-full gap-10'>
       {
         MisProyectos.map(({ id, name, descripcion, imagen, tecnologias, repositorio, pagina }) => (
-          <article className='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0' key={id}>
+          <article
+            key={id}
+            className='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'
+          >
             <div className='w-full md:w-1/2'>
               <div className='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-2 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
                 <img alt={name} className='object-cover object-top w-full h-56 sm:h-full' loading='lazy' src={imagen} />
