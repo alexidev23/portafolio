@@ -8,11 +8,11 @@ export function About () {
       id='sobreMi'
       className='py-24 xs:py-14 flex flex-col sm:w-minSection sm:m-auto lg:w-[800px]'
     >
-      <div className='flex gap-2 xs:mx-4'>
+      <div className='flex gap-2 xs:mx-4 lg:mx-0'>
         <IconUser />
         <h2 className='text-4xl font-bold uppercase text-links'>Sobre mi</h2>
       </div>
-      <div className='flex xs:flex-col-reverse w-auto pt-6 xs:mx-4'>
+      <div className='flex xs:flex-col-reverse lg:flex-row w-auto pt-6 xs:mx-4 lg:mx-0'>
         <div className='text-balance flex flex-col gap-4 mt-5 xs:w-full w-[500px]'>
           <p className='text-white font-medium text-sm text-balance'>
             Me llamo Alexis Escobar, tengo 23 años y en 2023 me recibí como <span className='text-sky-400'>Técnico Superior en Programación</span> en Teclab Instituto Técnico Superior donde realicé una práctica profesionalizante en ARGEC - It consulting.
