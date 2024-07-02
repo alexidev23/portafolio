@@ -18,7 +18,7 @@ export function Proyectos () {
               </div>
             </div>
 
-            <div className='w-full md:w-1/2 md:max-w-lg'>
+            <div className='w-full md:w-1/2 md:max-w-lg xs:px-4'>
               <div className='flex items-center h-8 gap-4'>
                 <h3 className='text-2xl font-bold text-gray-800 dark:text-gray-100'>
                   {name}

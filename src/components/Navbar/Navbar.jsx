@@ -3,7 +3,7 @@ import { linksNavBar } from '../../constants/constants'
 export function Navbar () {
   return (
     <header className='h-8 flex justify-center items-center my-4'>
-      <ul className='flex items-center justify-center w-[310px] md:w-[400px] rounded-3xl h-8 fixed border border-cyan-600 bg-navbar z-50'>
+      <ul className='flex items-center justify-center w-[380px] md:w-[400px] rounded-3xl h-8 fixed border border-cyan-600 bg-navbar z-50'>
         {linksNavBar.map(link => (
           <li
             key={link.id}
