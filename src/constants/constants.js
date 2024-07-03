@@ -2,7 +2,6 @@
 import Linkedin from '../assets/linkedin.svg'
 import GitHub from '../assets/github.svg'
 import Curriculum from '../assets/file.svg'
-
 // Section Portafolio
 // Projects
 import Calculadora from '../assets/proyectos/calculadora.avif'
@@ -59,7 +58,7 @@ export const LinksMedialSocial = [
     id: 3,
     name: 'Curriculum',
     icon: Curriculum,
-    url: 'https://drive.google.com/file/d/1ljjixiNoLn83KpG_Jk-etX_cxL-ufBOi/view?usp=sharing'
+    url: 'https://drive.google.com/file/d/1ttY-efzPmaNnxvW1_sySEEZV_8IftWWY/view?usp=sharing'
   }
 ]
 
