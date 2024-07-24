@@ -2,11 +2,11 @@
 import Linkedin from '../assets/linkedin.svg'
 import GitHub from '../assets/github.svg'
 import Curriculum from '../assets/file.svg'
-// Section Portafolio
 // Projects
 import Calculadora from '../assets/proyectos/calculadora.avif'
 import Encriptador from '../assets/proyectos/encriptador.webp'
 import TicTacToe from '../assets/proyectos/tictactoe.avif'
+import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
 // Icons
 import Html from '../assets/html5.svg'
 import Css from '../assets/css.svg'
@@ -89,5 +89,14 @@ export const MisProyectos = [
     tecnologias: [React, Tailwind],
     repositorio: 'https://github.com/alexidev23/Tic-Tac-Toe',
     pagina: 'https://tic-tac-toe-brown-one.vercel.app/'
+  },
+  {
+    id: 4,
+    name: 'Rock-Paper-Scissors',
+    descripcion: 'Idea sacada de FrontEnd Mentor, es un juego simple de piedra papel y tijera.',
+    imagen: RockPaperScissors,
+    tecnologias: [React, Tailwind],
+    repositorio: 'https://github.com/alexidev23/rock-paper-scissors-game',
+    pagina: 'https://rock-paper-scissors-game-pi-snowy.vercel.app/'
   }
 ]
