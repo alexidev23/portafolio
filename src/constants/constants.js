@@ -58,7 +58,7 @@ export const LinksMedialSocial = [
     id: 3,
     name: 'Curriculum',
     icon: Curriculum,
-    url: 'https://drive.google.com/file/d/1ttY-efzPmaNnxvW1_sySEEZV_8IftWWY/view?usp=sharing'
+    url: 'https://drive.google.com/file/d/1HA1K0Udl7ux5enPMVPy3OrEYds1GCWEA/view?usp=sharing'
   }
 ]
 
