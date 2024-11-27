@@ -2,7 +2,7 @@ import { IconPortafolio } from '../Icons/IconPortafolio'
 
 export function Experiencia () {
   return (
-    <section id='experiencia' className='lg:w-[800px] sm:w-[700px] xs:w-full m-auto py-24 xs:py-14'>
+    <section id='experiencia' className='lg:w-[800px] sm:w-[700px] xs:w-full m-auto h-[80vh] py-24 flex flex-col justify-center'>
       <div className='flex pb-8 items-center gap-2 xs:justify-center lg:justify-start'>
         <IconPortafolio />
         <h2 className='text-3xl font-bold uppercase text-links'>Experiencia Laboral</h2>

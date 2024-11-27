@@ -14,11 +14,11 @@ export function Proyectos () {
           >
             <div className='w-full md:w-1/2'>
               <div className='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-2 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
-                <img alt={name} className='object-cover object-top w-full h-56 sm:h-full' loading='lazy' src={imagen} />
+                <img alt={name} className='object-cover object-top w-full h-56 sm:h-[170px]' loading='lazy' src={imagen} />
               </div>
             </div>
 
-            <div className='w-full md:w-1/2 md:max-w-lg xs:px-4 lg:px-0'>
+            <div className='w-full md:w-1/2 md:max-w-lg xs:px-4 lg:px-0 h-[170px]'>
               <div className='flex items-center h-8 gap-4'>
                 <h3 className='text-2xl font-bold text-gray-800 dark:text-gray-100'>
                   {name}
@@ -33,11 +33,11 @@ export function Proyectos () {
               </div>
               <div className='flex flex-wrap mt-1'>
                 <div className='mt-2 text-gray-700 dark:text-gray-400'>{descripcion}</div>
-                <footer className='flex items-end justify-start mt-4 gap-x-4'>
-                  <a target='_blank' href={repositorio} rel='noreferrer' className='flex text-white gap-2 py-2 px-5 rounded-3xl text-sm items-center justify-center bg-cyan-900/45'><img src={File} className='h-4' alt='Icono Code proyecto' />Code</a>
+                <footer className='flex items-end mt-4 gap-x-4'>
+                  <a target='_blank' href={repositorio} rel='noreferrer' className='flex text-white gap-2 py-[6px] px-[18px] rounded-3xl text-sm items-center justify-center bg-cyan-900/45'><img src={File} className='h-4' alt='Icono Code proyecto' />Code</a>
                   {pagina === ''
                     ? ''
-                    : <a target='_blank' href={pagina} rel='noreferrer' className='flex text-white gap-2 py-2 px-5 rounded-3xl text-sm items-center justify-center bg-cyan-900/45'>
+                    : <a target='_blank' href={pagina} rel='noreferrer' className='flex text-white gap-2 py-[6px] px-5 rounded-3xl text-sm items-center justify-center bg-cyan-900/45'>
                       <IconLink />
                       Demo</a>}
                 </footer>

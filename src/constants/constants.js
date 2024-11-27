@@ -4,9 +4,11 @@ import GitHub from '../assets/github.svg'
 import Curriculum from '../assets/file.svg'
 // Projects
 import Calculadora from '../assets/proyectos/calculadora.avif'
-import Encriptador from '../assets/proyectos/encriptador.webp'
+import Encriptador from '../assets/proyectos/encriptador.avif'
 import TicTacToe from '../assets/proyectos/tictactoe.avif'
 import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
+import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
+import Ecommerce from '../assets/proyectos/ecommerce.avif'
 // Icons
 import Html from '../assets/html5.svg'
 import Css from '../assets/css.svg'
@@ -98,5 +100,23 @@ export const MisProyectos = [
     tecnologias: [React, Tailwind],
     repositorio: 'https://github.com/alexidev23/rock-paper-scissors-game',
     pagina: 'https://rock-paper-scissors-game-pi-snowy.vercel.app/'
+  },
+  {
+    id: 5,
+    name: 'Adultos mayores',
+    descripcion: 'Proyecto freelance para estudiantes de psicologia, donde habia que realizar una pagina destina al adulto mayor',
+    imagen: AdultosMayores,
+    tecnologias: [React, Tailwind],
+    repositorio: 'https://github.com/alexidev23/proyecto-psicologia',
+    pagina: 'https://pagina-web-para-adultos-mayores.vercel.app/'
+  },
+  {
+    id: 6,
+    name: 'Tienda Online',
+    descripcion: 'Proyecto final para el curso de Javascript en Coderhouse, donde presente un ecommerce',
+    imagen: Ecommerce,
+    tecnologias: [Html, Css, JavaScript],
+    repositorio: 'https://github.com/alexidev23/PFCoder-js-Alexis',
+    pagina: 'https://pf-coder-js-alexis.vercel.app/'
   }
 ]

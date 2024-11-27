@@ -1,5 +1,4 @@
 import { About } from './components/About/About'
-// import { Contacto } from './components/Contacto/Contact'
 import { Experiencia } from './components/Experiencia/Experiencia'
 import { Home } from './components/Home/Home'
 import { Navbar } from './components/Navbar/Navbar'
@@ -13,7 +12,6 @@ export function App () {
       <Experiencia />
       <Portafolio />
       <About />
-      {/* <Contacto /> */}
     </>
   )
 }
