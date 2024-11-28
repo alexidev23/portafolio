@@ -7,8 +7,8 @@ export function Navbar () {
   const { activeSection } = useSectionObserver()
 
   return (
-    <header className='lg:w-[800px] sm:w-[700px] w-full h-10 flex justify-between items-center mx-auto my-4 border border-cyan-600 bg-navbar rounded-3xl px-4 py-4 fixed z-50 inset-0'>
-      <div>
+    <header className='lg:w-[800px] sm:w-[700px] w-96 h-10 flex justify-center sm:justify-between items-center mx-auto my-4 border border-cyan-600 bg-navbar rounded-3xl px-4 py-4 fixed z-50 inset-0'>
+      <div className='hidden sm:block'>
         <img alt='Logo de la empresa' src={Icono} className='h-8 w-8' />
       </div>
       <ul className='flex items-center justify-center'>
@@ -17,7 +17,7 @@ export function Navbar () {
             <a
               aria-label={link.label}
               href={link.url}
-              className={`text-gray-400 uppercase text-sm font-bold hover:text-gray-200 duration-100 ${
+              className={`text-gray-400 uppercase text-xs sm:text-sm font-bold hover:text-gray-200 duration-100 ${
                 activeSection === link.label ? 'text-white' : ''
               }`}
             >

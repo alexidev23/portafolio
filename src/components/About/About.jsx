@@ -6,11 +6,11 @@ export function About () {
   return (
     <section
       id='sobreMi'
-      className='py-24 xs:py-14 flex flex-col sm:w-minSection sm:m-auto lg:w-[800px] h-[80vh] justify-center'
+      className='py-24 flex flex-col sm:w-minSection sm:m-auto lg:w-[800px] sm:h-[80vh] justify-center'
     >
-      <div className='flex gap-2 xs:mx-4 lg:mx-0'>
+      <div className='flex px-4 pb-8 items-center gap-2 lg:justify-start'>
         <IconUser />
-        <h2 className='text-4xl font-bold uppercase text-links'>Sobre mi</h2>
+        <h2 className='text-2xl sm:text-3xl font-bold uppercase text-links'>Sobre mi</h2>
       </div>
       <div className='flex xs:flex-col-reverse lg:flex-row w-auto pt-6 xs:mx-4 lg:mx-0'>
         <div className='text-balance flex flex-col gap-4 mt-5 xs:w-full w-[500px]'>

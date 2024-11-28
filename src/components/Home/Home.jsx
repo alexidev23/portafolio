@@ -7,10 +7,10 @@ export function Home () {
   return (
     <section
       id='home'
-      className='h-screen flex w-full sm:m-auto lg:w-[800px] sm:w-[700px] lg:py-24 py-14'
+      className='h-screen flex w-full sm:m-auto lg:w-[800px] sm:w-[700px] py-24'
     >
       <div className='my-auto gap-10'>
-        <div className='flex items-center lg:gap-2 gap-4 mb-2 xs:mx-6 lg:mx-0'>
+        <div className='flex flex-col sm:flex-row items-center lg:gap-2 gap-4 mb-2 xs:mx-6 lg:mx-0'>
           <img alt='Foto de Alexis Escobar' src={Perfil} height={120} width={120} className='rounded-full' />
           <Badge
             title='Disponible para trabajar'

@@ -2,10 +2,10 @@ import { IconPortafolio } from '../Icons/IconPortafolio'
 
 export function Experiencia () {
   return (
-    <section id='experiencia' className='lg:w-[800px] sm:w-[700px] xs:w-full m-auto h-[80vh] py-24 flex flex-col justify-center'>
-      <div className='flex pb-8 items-center gap-2 xs:justify-center lg:justify-start'>
+    <section id='experiencia' className='lg:w-[800px] sm:w-[700px] xs:w-full m-auto h-screen sm:h-[80vh] py-24 flex flex-col justify-center'>
+      <div className='flex px-4 pb-8 items-center gap-2 lg:justify-start'>
         <IconPortafolio />
-        <h2 className='text-3xl font-bold uppercase text-links'>Experiencia Laboral</h2>
+        <h2 className='text-2xl sm:text-3xl font-bold uppercase text-links'>Experiencia Laboral</h2>
       </div>
       <div className='pb-10'>
         <div className='flex'>
@@ -19,7 +19,7 @@ export function Experiencia () {
               <h4 className='text-lg font-extralight'>ARGEC - It Consulting</h4>
               <h5 className='text-xs xs:text-sm text-gray-400'>07/2023 - 12/2023</h5>
             </div>
-            <div className='text-gray-300 w-[350px] xs:mt-8 sm:mt-0 lg:w-[400px] xs:pl-2 sm:pl-2 xs:text-xl lg:text-lg'>
+            <div className='text-gray-300 w-[350px] xs:mt-8 sm:mt-0 lg:w-[400px] sm:pl-2 text-lg lg:text-lg'>
               <p>Lidere el desarrollo de la pagina de la empresa, utilizando react y tailwind para el frontend y php para el backend.</p>
             </div>
           </div>

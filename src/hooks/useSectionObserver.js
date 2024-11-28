@@ -12,7 +12,6 @@ const useSectionObserver = () => {
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
-        console.log('Observando:', entry.target.id, 'isIntersecting:', entry.isIntersecting)
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id)
         }
