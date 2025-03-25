@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets"
+import ImgPerfil from "../assets/foto5.avif"
+import Badge from "./Badge.astro"
+import Redes from "./Redes.astro"
+import IconArrowLeft from "./IconArrowLeft.astro"
+---
+
+<div class="w-full">
+  <div class="flex gap-6">
+    <!-- <img src="../assets/foto5.avif" alt="Imagen de Alexis Escobar" width="200" height="200" class="rounded-full" /> -->
+    <Image src={ImgPerfil} alt="Imagen de Alexis Escobar" width="120" height="120" class="rounded-full" />
+    <div class="flex flex-col justify-center gap-2">
+      <Badge />
+      <h1 class="text-3xl font-semibold">Hola, soy Alexis</h1>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1.5 py-2.5">
+    <p class="text-sm">
+      <span class="text-[#30A9DC]">Desarrollador Front-End Junior</span> de Córdoba, Argentina.
+      Me gradué como Técnico superior en programación en Teclab ...
+    </p>
+    <Redes />
+  </div>
+  <div class="flex justify-end py-2.5">
+    <button class="underline flex justify-center items-center gap-1.5">
+      mas info
+      <IconArrowLeft />
+    </button>
+  </div>
+</div>
