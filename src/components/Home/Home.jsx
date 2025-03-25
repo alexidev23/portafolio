@@ -21,7 +21,7 @@ export function Home () {
             Hola, soy Alexis
           </h1>
           <p className='text-lg text-white mt-4 xs:mx-4 sm:mx-0'><span className='text-[#37B3F9]'>Desarrollador Front-End Junior</span> de Córdoba, Argentina.</p>
-          <p className='text-lg text-white xs:mx-4 sm:mx-0 lg:w-[700px]'>Me gradué como <span className='text-[#41ecf8]'>Técnico superior en programación</span> de Teclab como Técnico superior en Programación y he complementado mis conocimientos con cursos especializados en <span className='text-[#41ecf8]'>Python, QA Manual y JavaScript</span> en Coderhouse.</p>
+          <p className='text-lg text-white xs:mx-4 sm:mx-0 lg:w-[700px]'>Me gradué como <span className='text-[#41ecf8]'>Técnico superior en programación</span> en Teclab y he complementado mis conocimientos con cursos especializados en <span className='text-[#41ecf8]'>Python, QA Manual y JavaScript</span> en Coderhouse.</p>
           <p className='text-lg text-white xs:mx-4 sm:mx-0 lg:w-[700px]'>
             Me encanta construir sitios web funcionales y atractivos, y siempre estoy buscando nuevas oportunidades para crecer como profesional.
           </p>
