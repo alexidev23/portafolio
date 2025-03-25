@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets"
+import IconLinkedIn from "../assets/linkedin.svg"
+import IconArrow from "./IconArrow.astro"
+---
+
+<div class="flex items-center gap-2.5">
+  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
+    <a    
+      href="#" rel='noreferrer'
+      target='_blank'
+      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
+    >
+      {/* Hacer que si no tiene icono no se vea */}
+      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
+      <span class='text-white text-sm'>LinkedIn</span>
+      <IconArrow />
+    </a>
+  </div>
+  
+  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
+    <a    
+      href="#" rel='noreferrer'
+      target='_blank'
+      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
+    >
+      {/* Hacer que si no tiene icono no se vea */}
+      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
+      <span class='text-white text-sm'>Github</span>
+      <IconArrow />
+    </a>
+  </div>
+  
+  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
+    <a    
+      href="#" rel='noreferrer'
+      target='_blank'
+      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
+    >
+      {/* Hacer que si no tiene icono no se vea */}
+      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
+      <span class='text-white text-sm'>Curriculum</span>
+      <IconArrow />
+    </a>
+  </div>
+  
+  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
+    <a    
+      href="#" rel='noreferrer'
+      target='_blank'
+      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
+    >
+      {/* Hacer que si no tiene icono no se vea */}
+      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
+      <span class='text-white text-sm'>Contacto</span>
+      <IconArrow />
+    </a>
+  </div>
+</div>
