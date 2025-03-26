@@ -1,0 +1,135 @@
+---
+import { Image } from "astro:assets";
+import ProyectoUno from "../../assets/proyectos/calculadora.avif"
+import ProyectoDos from "../../assets/proyectos/encriptador.avif"
+import ProyectoTres from "../../assets/proyectos/tictactoe.avif"
+import ProyectoCuatro from "../../assets/proyectos/rockPaperScissors.avif"
+import ProyectoCinco from "../../assets/proyectos/adultosMayores.avif"
+import ProyectoSeis from "../../assets/proyectos/ecommerce.avif"
+import IconFolder from "../Iconos/IconFolder.astro";
+
+// Define tus proyectos aquí
+const proyectos = [
+  {
+    id: 1,
+    imagen: ProyectoUno, // Reemplaza con la ruta real de tu imagen
+    titulo: "Calculadora",
+    url: "/proyecto/calculadora"
+  },
+  {
+    id: 2,
+    imagen: ProyectoDos, // Reemplaza con la ruta real de tu imagen
+    titulo: "Calculadora 2",
+    url: "/proyecto/calculadora-2"
+  },
+  {
+    id: 3,
+    imagen: ProyectoTres, // Reemplaza con la ruta real de tu imagen
+    titulo: "Calculadora 3",
+    url: "/proyecto/calculadora-3"
+  },
+  // Agregando más proyectos para demostrar el desplazamiento
+  {
+    id: 4,
+    imagen: ProyectoCuatro,
+    titulo: "Calculadora 4",
+    url: "/proyecto/calculadora-4"
+  },
+  {
+    id: 5,
+    imagen: ProyectoCinco,
+    titulo: "Calculadora 5",
+    url: "/proyecto/calculadora-5"
+  },
+  {
+    id: 6,
+    imagen: ProyectoSeis,
+    titulo: "Calculadora 5",
+    url: "/proyecto/calculadora-5"
+  },
+];
+---
+
+<div>
+  <div class="flex items-center gap-1.5">
+    <IconFolder />
+    <h2 class="text-[#5EA1F6] text-4xl font-bold">Proyectos</h2>
+  </div>
+  
+  <div class="relative pt-5">
+    <div id="proyectos-container" class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth">
+      {proyectos.map((proyecto) => (
+        <a href={proyecto.url} class="block min-w-[160px] flex-shrink-0 rounded-md overflow-hidden">
+          <div class="p-2">
+            <Image src={proyecto.imagen} alt={proyecto.titulo} class="w-full h-32 object-cover rounded-md" />
+            <div class="mt-2 px-1">
+              <h3 class="text-white font-medium text-lg">{proyecto.titulo}</h3>
+              {/* <p class="text-gray-400 text-sm">{proyecto.descripcion}</p> */}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+    
+    <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#0f3042] p-2 rounded-full text-white opacity-0 transition-opacity duration-300 z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    
+    <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#0f3042] p-2 rounded-full text-white transition-opacity duration-300 z-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  /* Ocultar scrollbar pero mantener funcionalidad */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  // Script del lado del cliente para manejar la navegación
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('proyectos-container');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    
+    if (container && nextBtn && prevBtn) {
+      // Verificar si hay scroll horizontal disponible
+      const checkScrollPosition = () => {
+        // Mostrar/ocultar botón anterior según la posición de scroll
+        prevBtn.style.opacity = container.scrollLeft > 0 ? '1' : '0';
+        
+        // Mostrar/ocultar botón siguiente según si hay más contenido para desplazar
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        nextBtn.style.opacity = container.scrollLeft >= maxScrollLeft - 10 ? '0' : '1';
+      };
+      
+      // Ejecutar al cargar
+      checkScrollPosition();
+      
+      // Desplazamiento al hacer clic en los botones
+      nextBtn.addEventListener('click', () => {
+        container.scrollBy({ left: 200, behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 500); // Verificar después de la animación
+      });
+      
+      prevBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -200, behavior: 'smooth' });
+        setTimeout(checkScrollPosition, 500); // Verificar después de la animación
+      });
+      
+      // Actualizar visibilidad de botones al desplazarse
+      container.addEventListener('scroll', checkScrollPosition);
+    }
+  });
+</script>
