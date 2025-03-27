@@ -3,18 +3,17 @@ import Experiencia from '../components/Experiencia/Experiencia.astro';
 import Home from '../components/Home/Home.astro';
 import Proyectos from '../components/Proyectos/Proyectos.astro';
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
 ---
 
 <Layout>
-	<div class="grid grid-cols-3 grid-rows-2 gap-2 w-[1200px]">
-		<div class="border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521] col-span-2">
+	<div class="flex flex-col items-center xl:items-stretch gap-4 xl:grid xl:grid-cols-3 xl:grid-rows-2 md:gap-2 xl:w-[1200px] md:w-[800px] md:p-10 xl:p-0">
+		<div class="w-[340px] md:w-auto border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521] xl:col-span-2">
 			<Home />
 		</div>
-		<div class="border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521]">
+		<div class="w-[340px] md:w-full border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521]">
 			<Experiencia />
 		</div>
-		<div class="border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521] col-span-3 row-start-2">
+		<div class="w-[340px] md:w-full border-2 border-[#41ECF8] rounded-md px-3.5 py-2.5 bg-[#051521] xl:col-span-3 xl:row-start-2">
 			<Proyectos />
 		</div>
 	</div>
