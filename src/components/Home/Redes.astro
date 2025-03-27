@@ -1,59 +1,53 @@
 ---
 import { Image } from "astro:assets"
 import IconLinkedIn from "../../assets/linkedin.svg"
+import IconGitHub from "../../assets/github.svg"
+import IconFile from "../../assets/file.svg"
+import IconMail from "../../assets/mail.svg"
 import IconArrow from "../Iconos/IconArrow.astro"
+
+const redesSociales = [
+  {
+    id: 1,
+    name: "LinkedIn",
+    icon: IconLinkedIn,
+    url: "https://www.linkedin.com/in/alexis-escobar-95b491184/"
+  },
+  {
+    id: 2,
+    name: "GitHub",
+    icon: IconGitHub,
+    ulr: "https://github.com/alexidev23"
+  },
+  {
+    id: 3,
+    name: "Curriculum",
+    icon: IconFile,
+    url: "https://drive.google.com/file/d/1wHdRo4gz5BVY2yMfQrZCZ_H2qzNX72OL/view?usp=drive_link"
+  },
+  {
+    id: 4,
+    name: "Contacto",
+    url: "https://drive.google.com/file/d/1wHdRo4gz5BVY2yMfQrZCZ_H2qzNX72OL/view?usp=drive_link"
+  }
+]
 ---
 
 <div class="flex items-center gap-2.5 flex-wrap mt-2">
-  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
-    <a    
-      href="#" rel='noreferrer'
-      target='_blank'
-      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
-    >
-      {/* Hacer que si no tiene icono no se vea */}
-      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
-      <span class='text-white text-sm'>LinkedIn</span>
-      <IconArrow />
-    </a>
-  </div>
-  
-  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
-    <a    
-      href="#" rel='noreferrer'
-      target='_blank'
-      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
-    >
-      {/* Hacer que si no tiene icono no se vea */}
-      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
-      <span class='text-white text-sm'>Github</span>
-      <IconArrow />
-    </a>
-  </div>
-  
-  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
-    <a    
-      href="#" rel='noreferrer'
-      target='_blank'
-      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
-    >
-      {/* Hacer que si no tiene icono no se vea */}
-      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
-      <span class='text-white text-sm'>Curriculum</span>
-      <IconArrow />
-    </a>
-  </div>
-  
-  <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
-    <a    
-      href="#" rel='noreferrer'
-      target='_blank'
-      class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
-    >
-      {/* Hacer que si no tiene icono no se vea */}
-      <Image src={IconLinkedIn} alt=`Icono` width="15" height="15" />
-      <span class='text-white text-sm'>Contacto</span>
-      <IconArrow />
-    </a>
-  </div>
+  {redesSociales.map((redes) => (
+    <div class='flex gap-4 xs:gap-2 xs:justify-center sm:justify-normal'>
+      <a    
+        href={redes.url} rel='noreferrer'
+        target='_blank'
+        class='bg-teal-600/45 h-8 px-3.5 py-1 flex gap-1.5 items-center justify-center rounded-full'
+      >
+        {/* Hacer que si no tiene icono no se vea */}
+        {redes.icon && <Image src={redes.icon} alt={redes.name} width="15" height="15" />}
+        {/* <img src={redes.icon} alt={redes.name} width="15" height="15" /> */}
+        {/* <Image src={redes.icon} alt={redes.name} width="15" height="15" /> */}
+        <span class='text-white text-sm'>{redes.name}</span>
+        <IconArrow />
+      </a>
+    </div>
+  ))}
 </div>
