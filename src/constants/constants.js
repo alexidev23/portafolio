@@ -9,12 +9,16 @@ import TicTacToe from '../assets/proyectos/tictactoe.avif'
 import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
 import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
 import Ecommerce from '../assets/proyectos/ecommerce.avif'
+import Metalurgica from '../assets/proyectos/mealurgicaescobar.avif'
 // Icons
 import Html from '../assets/html5.svg'
 import Css from '../assets/css.svg'
 import JavaScript from '../assets/javascript.svg'
 import React from '../assets/react.svg'
 import Tailwind from '../assets/tailwindcss.svg'
+import Nextjs from '../assets/nextjs_icon_dark.svg'
+import Shadcn from '../assets/shadcn-ui_dark.svg'
+import Typescript from '../assets/typescript.svg'
 
 export const linksNavBar = [
   {
@@ -118,5 +122,14 @@ export const MisProyectos = [
     tecnologias: [Html, Css, JavaScript],
     repositorio: 'https://github.com/alexidev23/PFCoder-js-Alexis',
     pagina: 'https://pf-coder-js-alexis.vercel.app/'
+  },
+  {
+    id: 7,
+    name: 'Metalúrgica Escoba',
+    descripcion: 'Sitio web creado para un taller de metalurgia. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
+    imagen: Metalurgica,
+    tecnologias: [Nextjs, Typescript, Tailwind, Shadcn],
+    repositorio: 'https://github.com/alexidev23/metalurgica',
+    pagina: 'https://www.metalurgicaescobar.com/'
   }
 ]
