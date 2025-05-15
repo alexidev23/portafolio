@@ -125,8 +125,8 @@ export const MisProyectos = [
   },
   {
     id: 7,
-    name: 'Metalúrgica Escoba',
-    descripcion: 'Sitio web creado para un taller de metalurgia. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
+    name: 'Metalúrgica Escobar',
+    descripcion: 'Sitio web creado para un taller de metalurgica. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
     imagen: Metalurgica,
     tecnologias: [Nextjs, Typescript, Tailwind, Shadcn],
     repositorio: 'https://github.com/alexidev23/metalurgica',
