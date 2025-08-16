@@ -1,15 +1,15 @@
-// Section Home
+// Assets
 import Linkedin from '../assets/linkedin.svg'
 import GitHub from '../assets/github.svg'
 import Curriculum from '../assets/file.svg'
-// Projects
+// Proyectos
 import Calculadora from '../assets/proyectos/calculadora.avif'
 import Encriptador from '../assets/proyectos/encriptador.avif'
 import TicTacToe from '../assets/proyectos/tictactoe.avif'
 import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
 import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
 import Ecommerce from '../assets/proyectos/ecommerce.avif'
-import Metalurgica from '../assets/proyectos/mealurgicaescobar.avif'
+import Metalurgica from '../assets/proyectos/metalurgicaescobar.avif'
 // Icons
 import Html from '../assets/html5.svg'
 import Css from '../assets/css.svg'
@@ -47,7 +47,7 @@ export const linksNavBar = [
   }
 ]
 
-export const LinksMedialSocial = [
+export const LinksSocialMedia = [
   {
     id: 1,
     name: 'Linkedin',
@@ -64,15 +64,35 @@ export const LinksMedialSocial = [
     id: 3,
     name: 'Curriculum',
     icon: Curriculum,
-    url: 'https://drive.google.com/file/d/1wHdRo4gz5BVY2yMfQrZCZ_H2qzNX72OL/view?usp=sharing'
+    url: 'https://drive.google.com/file/d/1dhw7EHFkKQFU7F5BOy8ztEOWIttOpLjk/view?usp=sharing'
   }
 ]
+
+export const experiencias = [
+  {
+    puesto: 'Desarrollador Freelance',
+    empresa: 'Proyectos Independientes',
+    periodo: '2024 – Actualidad',
+    descripcion: [
+      'Plataforma para estudiantes de psicología: desarrollo de un sitio web informativo y de recursos, optimizado para dispositivos móviles.',
+      'Página web para taller metalúrgico: diseño e implementación de un sitio corporativo con catálogo de servicios y formulario de contacto.'
+    ]
+  },
+  {
+    puesto: 'Desarrollador Junior',
+    empresa: 'ARGEC - IT Consulting',
+    periodo: '07/2023 - 12/2023',
+    descripcion:
+      'Lideré el desarrollo de la página de la empresa, utilizando React y Tailwind para el frontend y PHP para el backend.'
+  }
+]
+
 
 export const MisProyectos = [
   {
     id: 1,
     name: 'Calculadora',
-    descripcion: 'Primer proyecto donde implemento JavaScript, es una calculadora donde se pueden realizar las operaciones básicas.',
+    descripcion: 'Primer proyecto donde implementé JavaScript. Es una calculadora donde se pueden realizar operaciones básicas.',
     imagen: Calculadora,
     tecnologias: [Html, Css, JavaScript],
     repositorio: 'https://github.com/alexidev23/Calculadora',
@@ -81,7 +101,7 @@ export const MisProyectos = [
   {
     id: 2,
     name: 'Encriptador de Texto',
-    descripcion: 'Proyecto para el programa de One - Oracle Next Education; es un encriptador de texto y a su vez un desencriptador.',
+    descripcion: 'Proyecto para el programa One - Oracle Next Education; es un encriptador y desencriptador de texto.',
     imagen: Encriptador,
     tecnologias: [Html, Css, JavaScript],
     repositorio: 'https://github.com/alexidev23/Encriptador-de-texto',
@@ -90,7 +110,7 @@ export const MisProyectos = [
   {
     id: 3,
     name: 'Tic-Tac-Toe',
-    descripcion: 'Primer proyecto utilizando react y tailwind, idea sacada del canal de midudev.',
+    descripcion: 'Primer proyecto utilizando React y Tailwind. Idea basada en el canal de midudev.',
     imagen: TicTacToe,
     tecnologias: [React, Tailwind],
     repositorio: 'https://github.com/alexidev23/Tic-Tac-Toe',
@@ -99,7 +119,7 @@ export const MisProyectos = [
   {
     id: 4,
     name: 'Rock-Paper-Scissors',
-    descripcion: 'Idea sacada de FrontEnd Mentor, es un juego simple de piedra papel y tijera.',
+    descripcion: 'Idea basada en FrontEnd Mentor. Es un juego simple de piedra, papel o tijera.',
     imagen: RockPaperScissors,
     tecnologias: [React, Tailwind],
     repositorio: 'https://github.com/alexidev23/rock-paper-scissors-game',
@@ -108,7 +128,7 @@ export const MisProyectos = [
   {
     id: 5,
     name: 'Adultos mayores',
-    descripcion: 'Proyecto freelance para estudiantes de psicologia, donde habia que realizar una pagina destina al adulto mayor',
+    descripcion: 'Proyecto freelance para estudiantes de psicología. Página destinada a adultos mayores.',
     imagen: AdultosMayores,
     tecnologias: [React, Tailwind],
     repositorio: 'https://github.com/alexidev23/proyecto-psicologia',
@@ -117,7 +137,7 @@ export const MisProyectos = [
   {
     id: 6,
     name: 'Tienda Online',
-    descripcion: 'Proyecto final para el curso de Javascript en Coderhouse, donde presente un ecommerce',
+    descripcion: 'Proyecto final para el curso de JavaScript en Coderhouse, donde presenté un ecommerce.',
     imagen: Ecommerce,
     tecnologias: [Html, Css, JavaScript],
     repositorio: 'https://github.com/alexidev23/PFCoder-js-Alexis',
@@ -126,7 +146,7 @@ export const MisProyectos = [
   {
     id: 7,
     name: 'Metalúrgica Escobar',
-    descripcion: 'Sitio web creado para un taller de metalurgica. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
+    descripcion: 'Sitio web creado para un taller de metalúrgica. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
     imagen: Metalurgica,
     tecnologias: [Nextjs, Typescript, Tailwind, Shadcn],
     repositorio: 'https://github.com/alexidev23/metalurgica',
