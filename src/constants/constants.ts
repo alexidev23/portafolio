@@ -10,6 +10,7 @@ import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
 import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
 import Ecommerce from '../assets/proyectos/ecommerce.avif'
 import Metalurgica from '../assets/proyectos/metalurgicaescobar.avif'
+import TodoApp from '../assets/proyectos/TodoDarkMode.avif'
 // Icons
 import Html from '../assets/html5.svg'
 import Css from '../assets/css.svg'
@@ -65,14 +66,14 @@ export const LinksSocialMedia: LinksSocialMediaProps[] = [
     id: 3,
     name: 'Curriculum',
     icon: Curriculum,
-    url: 'https://drive.google.com/file/d/1dhw7EHFkKQFU7F5BOy8ztEOWIttOpLjk/view?usp=sharing'
+    url: 'https://drive.google.com/file/d/1dnLX-WhaPYhsUFxUiTAHrehEyd9nPKz6/view?usp=drive_link'
   }
 ]
 
 export const homeParagraphs = [
-  'Me gradué como Técnico superior en programación en Teclab y he complementado mis conocimientos con cursos especializados en Python, QA Manual y JavaScript en Coderhouse.',
-  'Me apasiona crear sitios web funcionales, rápidos y atractivos, y asegurar su calidad mediante pruebas exhaustivas y atención al detalle.',
-  'Actualmente ofrezco mis servicios como Desarrollador Front-End y QA Manual, ayudando a empresas y proyectos a construir productos digitales sólidos y confiables.',
+  'Soy Técnico Superior en Programación graduado en Teclab, con formación complementaria en Python, QA Manual y JavaScript (Coderhouse).',
+  'Me apasiona construir interfaces modernas, rápidas y funcionales, cuidando tanto la experiencia del usuario como la calidad del código.',
+  'Actualmente me desempeño como Desarrollador Front-End, centrado en React, TypeScript, Vite, Tailwind y Shadcn, explorando también el testing automatizado con Cypress.',
   '🚀 Siempre en busca de nuevos desafíos para seguir creciendo como profesional.'
 ]
 
@@ -99,24 +100,6 @@ export const experiencias: ExperienciaProps[] = [
 export const MisProyectos: ProyectosProps[] = [
   {
     id: 1,
-    name: 'Calculadora',
-    descripcion: 'Primer proyecto donde implementé JavaScript. Es una calculadora donde se pueden realizar operaciones básicas.',
-    imagen: Calculadora,
-    tecnologias: [Html, Css, JavaScript],
-    repositorio: 'https://github.com/alexidev23/Calculadora',
-    pagina: 'https://alexidev23.github.io/Calculadora/'
-  },
-  {
-    id: 2,
-    name: 'Encriptador de Texto',
-    descripcion: 'Proyecto para el programa One - Oracle Next Education; es un encriptador y desencriptador de texto.',
-    imagen: Encriptador,
-    tecnologias: [Html, Css, JavaScript],
-    repositorio: 'https://github.com/alexidev23/Encriptador-de-texto',
-    pagina: 'https://alexidev23.github.io/Encriptador-de-texto/'
-  },
-  {
-    id: 3,
     name: 'Tic-Tac-Toe',
     descripcion: 'Primer proyecto utilizando React y Tailwind. Idea basada en el canal de midudev.',
     imagen: TicTacToe,
@@ -125,7 +108,7 @@ export const MisProyectos: ProyectosProps[] = [
     pagina: 'https://tic-tac-toe-brown-one.vercel.app/'
   },
   {
-    id: 4,
+    id: 2,
     name: 'Rock-Paper-Scissors',
     descripcion: 'Idea basada en FrontEnd Mentor. Es un juego simple de piedra, papel o tijera.',
     imagen: RockPaperScissors,
@@ -134,7 +117,7 @@ export const MisProyectos: ProyectosProps[] = [
     pagina: 'https://rock-paper-scissors-game-pi-snowy.vercel.app/'
   },
   {
-    id: 5,
+    id: 3,
     name: 'Adultos mayores',
     descripcion: 'Proyecto freelance para estudiantes de psicología. Página destinada a adultos mayores.',
     imagen: AdultosMayores,
@@ -143,7 +126,7 @@ export const MisProyectos: ProyectosProps[] = [
     pagina: 'https://pagina-web-para-adultos-mayores.vercel.app/'
   },
   {
-    id: 6,
+    id: 4,
     name: 'Tienda Online',
     descripcion: 'Proyecto final para el curso de JavaScript en Coderhouse, donde presenté un ecommerce.',
     imagen: Ecommerce,
@@ -152,14 +135,23 @@ export const MisProyectos: ProyectosProps[] = [
     pagina: 'https://pf-coder-js-alexis.vercel.app/'
   },
   {
-    id: 7,
+    id: 5,
     name: 'Metalúrgica Escobar',
     descripcion: 'Sitio web creado para un taller de metalúrgica. Incluye formulario de contacto funcional y diseño adaptado al cliente.',
     imagen: Metalurgica,
     tecnologias: [Nextjs, Typescript, Tailwind, Shadcn],
     repositorio: 'https://github.com/alexidev23/metalurgica',
     pagina: 'https://www.metalurgicaescobar.com/'
-  }
+  },
+  {
+    id: 6,
+    name: 'ToDo App',
+    descripcion: 'Aplicación web para gestionar tareas. Permite agregar, editar, eliminar y marcar tareas como completadas.',
+    imagen: TodoApp,
+    tecnologias: [React, Typescript, Tailwind, Shadcn],
+    repositorio: 'https://github.com/alexidev23/todo-frontend',
+    pagina: 'https://todo-ts-three-kappa.vercel.app/'
+  },
 ]
 
 export const aboutParagraphs = [
