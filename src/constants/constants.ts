@@ -3,8 +3,6 @@ import Linkedin from '../assets/linkedin.svg'
 import GitHub from '../assets/github.svg'
 import Curriculum from '../assets/file.svg'
 // Proyectos
-import Calculadora from '../assets/proyectos/calculadora.avif'
-import Encriptador from '../assets/proyectos/encriptador.avif'
 import TicTacToe from '../assets/proyectos/tictactoe.avif'
 import RockPaperScissors from '../assets/proyectos/rockPaperScissors.avif'
 import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
