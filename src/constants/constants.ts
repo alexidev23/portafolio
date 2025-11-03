@@ -153,7 +153,8 @@ export const MisProyectos: ProyectosProps[] = [
 ]
 
 export const aboutParagraphs = [
-  'Soy Alexis Escobar, tengo 25 años y soy Técnico Superior en Programación (Teclab, 2023). Durante mi práctica profesional en ARGEC - IT Consulting participé en el desarrollo de proyectos reales que reforzaron mis habilidades técnicas y de trabajo en equipo.',
-  'Actualmente me especializo de forma autodidacta en React y Tailwind CSS, y he complementado mi formación con cursos de Python, QA Manual y JavaScript en CoderHouse.',
-  'Estoy en búsqueda de oportunidades como Desarrollador Frontend o QA Manual, donde pueda aportar mis conocimientos y seguir creciendo profesionalmente.'
+  'Soy Alexis Escobar, tengo 25 años y soy Técnico Superior en Programación (Teclab, 2023). Durante mi práctica profesional en ARGEC - IT Consulting, participé en el desarrollo de proyectos reales que fortalecieron mis habilidades técnicas y mi capacidad para trabajar en equipo.',
+  'Actualmente me especializo de forma autodidacta en React y Tailwind CSS, y complemento mi formación con cursos de Python, QA Manual y JavaScript en CoderHouse.',
+  'También me encuentro aprendiendo Cypress para profundizar en testing automatizado y mejorar la calidad de los desarrollos en los que participo.',
+  'Busco nuevas oportunidades como Desarrollador Frontend, donde pueda aportar valor con mi conocimiento, compromiso y entusiasmo por seguir creciendo profesionalmente.'
 ]

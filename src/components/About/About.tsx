@@ -13,11 +13,11 @@ export function About () {
         <h2 className='text-2xl sm:text-3xl font-bold uppercase text-[#609dfa]'>Sobre mi</h2>
       </div>
       <div className='flex flex-col-reverse lg:flex-row w-auto  mx-4 lg:mx-0'>
-        <div className='flex flex-col gap-4 w-full lg:w-[500px]'>
+        <div className='flex flex-col gap-2 w-full lg:w-[500px]'>
           {aboutParagraphs.map((text, idx) => (
             <p  
               key={idx}
-              className='text-white font-medium text-sm text-balance'
+              className='text-white font-medium text-md text-balance'
             >
               {text}
             </p>
