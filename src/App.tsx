@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar"
 import Portafolio from "./components/Portfolio"
 import Tecnologias from "./components/Tecnologias"
 import { ThemeProvider } from "./components/theme-provider"
+import { Toaster } from "sonner"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Tecnologias />
       <Contacto />
       <Footer />
+      <Toaster richColors position="top-right" />
     </ThemeProvider>
   )
 }
