@@ -44,15 +44,15 @@ export default function Portafolio() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 rounded bg-transparent hover:text-primary cursor-pointer">
+                <div className="flex justify-center gap-2">
+                  <a href={project.pagina} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-6 py-2">
                     <ExternalLink className="h-4 w-4" />
                     Demo
-                  </Button>
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 rounded bg-transparent hover:text-primary cursor-pointer">
+                  </a>
+                  <a href={project.repositorio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-4 py-2">
                     <Github className="h-4 w-4" />
                     Código
-                  </Button>
+                  </a>
                 </div>
               </div>
             </Card>
