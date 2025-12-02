@@ -1,6 +1,6 @@
 // Proyectos
 import AdultosMayores from '../assets/proyectos/adultosMayores.avif'
-import Ecommerce from '../assets/proyectos/ecommerce.avif'
+import TechParts from '../assets/proyectos/techparts.avif'
 import Metalurgica from '../assets/proyectos/metalurgicaescobar.avif'
 import TodoApp from '../assets/proyectos/TodoDarkMode.avif'
 import type { ProyectosProps } from '../types/types'
@@ -9,10 +9,10 @@ import type { ProyectosProps } from '../types/types'
 export const MisProyectos: ProyectosProps[] = [
   {
     id: 1,
-    name: 'Tienda Online',
-    descripcion: 'Proyecto final para el curso de JavaScript en Coderhouse, donde presenté un ecommerce.',
-    imagen: Ecommerce,
-    tecnologias: ["Html", "Css", "JavaScript"],
+    name: 'TechParts – E-commerce de Repuestos para Celulares',
+    descripcion: 'Aplicación e-commerce creada con React + TypeScript, usando React Router para la navegación, Tailwind para el diseño y componentes shadcn/ui para una UI limpia y reutilizable. Catálogo filtrable y experiencia responsive.',
+    imagen: TechParts,
+    tecnologias: ["React", "TypeScript", "Tailwind", "shadcn/ui", "React Router"],
     repositorio: 'https://github.com/alexidev23/PFCoder-js-Alexis',
     pagina: 'https://pf-coder-js-alexis.vercel.app/'
   },
