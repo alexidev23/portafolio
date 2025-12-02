@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Briefcase, ExternalLink, Github } from "lucide-react"
 import { MisProyectos } from "@/constants/constants"
 
@@ -15,7 +14,7 @@ export default function Portafolio() {
           Una selección de proyectos que muestran mis habilidades en React, TypeScript y desarrollo web moderno.
         </p>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-2 "> {/* sm:grid-cols-2 lg:grid-cols-3 */}
           {MisProyectos.map((project, i) => (
             <Card key={i} className="overflow-hidden hover:shadow-xl transition-all rounded-lg group flex flex-col">
               {/* Project Image */}
@@ -31,10 +30,10 @@ export default function Portafolio() {
               <div className="flex flex-col justify-between flex-1 p-4">
                 <div>
                   <h3 className="font-semibold text-lg mb-2">{project.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-1">{project.descripcion}</p>
+                  <p className="text-sm text-muted-foreground mb-3.5">{project.descripcion}</p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-2">
+                  <div className="flex flex-wrap gap-2 mb-3.5">
                     {project.tecnologias.map((tech, j) => (
                       <span key={j} className="text-xs px-2 py-1 bg-secondary text-secondary-foreground rounded">
                         {tech}
@@ -44,15 +43,15 @@ export default function Portafolio() {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 rounded bg-transparent hover:text-primary cursor-pointer">
+                <div className="flex justify-start gap-2">
+                  <a href={project.pagina} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-6 py-2">
                     <ExternalLink className="h-4 w-4" />
                     Demo
-                  </Button>
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 rounded bg-transparent hover:text-primary cursor-pointer">
+                  </a>
+                  <a href={project.repositorio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-4 py-2">
                     <Github className="h-4 w-4" />
                     Código
-                  </Button>
+                  </a>
                 </div>
               </div>
             </Card>
