@@ -13,6 +13,7 @@ const sections = [
 export function Navbar () {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     const observers = sections.map(({ id }) => {
@@ -30,6 +31,16 @@ export function Navbar () {
     return () => observers.forEach(o => o?.disconnect())
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0)
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
@@ -37,7 +48,15 @@ export function Navbar () {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      {/* Scroll progress bar */}
+      <div className="absolute bottom-0 left-0 h-[2px] bg-primary/20 w-full">
+        <div
+          className="h-full bg-primary transition-[width] duration-150 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+
       <nav aria-label="Navegación principal" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2">
           <img alt='Logo de Alexis Escobar' src={Icono} className='h-8 w-8' />
@@ -50,7 +69,7 @@ export function Navbar () {
               key={id}
               onClick={() => scrollToSection(id)}
               aria-current={activeSection === id ? "page" : undefined}
-              className="text-sm transition-colors hover:text-primary cursor-pointer"
+              className="text-sm transition-colors hover:text-primary cursor-pointer relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
             >
               {label}
             </button>
@@ -73,7 +92,7 @@ export function Navbar () {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-border/40 bg-card md:hidden">
+        <div className="border-t border-border/40 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1 px-6 py-4">
             {sections.map(({ id, label }) => (
               <button

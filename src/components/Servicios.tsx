@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers } from "lucide-react"
+import { useInView } from "@/hooks/useInView"
 
 const services = [
   {
@@ -36,9 +37,11 @@ const services = [
 ]
 
 export default function Servicios() {
+  const { ref, isInView } = useInView()
+
   return (
     <section id="services" className="px-6 py-20 border-t border-border/40">
-      <div className="mx-auto max-w-4xl">
+      <div ref={ref} className={`mx-auto max-w-4xl transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="flex items-center gap-2 mb-4">
           <Layers size={30} className="text-primary" />
           <h2 className="text-primary text-3xl font-bold">Servicios</h2>
@@ -49,10 +52,14 @@ export default function Servicios() {
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = service.icon
             return (
-              <Card key={service.title} className="p-6 hover:border-primary/50 transition-all hover:shadow-lg rounded-lg group">
+              <Card
+                key={service.title}
+                className={`p-6 hover:border-primary/50 transition-all hover:shadow-lg rounded-lg group hover:-translate-y-1 duration-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
                 <Icon className="h-8 w-8 text-primary mb-1 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold mb-0.5">{service.title}</h3>
                 <p className="text-sm text-muted-foreground">{service.description}</p>

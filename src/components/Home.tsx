@@ -13,7 +13,10 @@ const scrollToSection = (id: string) => {
       <div className="mx-auto max-w-4xl">
         {/* Avatar */}
         <div className="mb-2 flex justify-center">
-          <img src={Perfil} alt="Foto de Alexis Escobar" className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-primary/50 shadow-lg animate-fade-in" />
+          <div className="relative group">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-accent to-primary opacity-75 blur group-hover:opacity-100 group-hover:blur-md transition-all duration-500 animate-pulse-slow" />
+            <img src={Perfil} alt="Foto de Alexis Escobar" className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-background shadow-lg animate-fade-in" />
+          </div>
         </div>
 
         {/* Main Content */}
@@ -29,8 +32,8 @@ const scrollToSection = (id: string) => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => scrollToSection("contact")} className="rounded-lg gap-2 hover:text-white cursor-pointer">
-              Contratarme <ArrowRight className="h-4 w-4" />
+            <Button size="lg" onClick={() => scrollToSection("contact")} className="rounded-lg gap-2 hover:text-white cursor-pointer group">
+              Contratarme <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button size="lg" variant="outline" onClick={() => scrollToSection("projects")} className="rounded-lg hover:text-primary cursor-pointer">
               Ver Proyectos
@@ -45,4 +48,3 @@ const scrollToSection = (id: string) => {
     </section>
   )
 }
-

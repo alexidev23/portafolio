@@ -216,4 +216,17 @@
   .animate-slide-in-left {
     animation: slideInLeft 0.6s ease-out;
   }
+
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+  }
 }

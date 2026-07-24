@@ -1,6 +1,7 @@
 import { Mail, MessageSquare, User } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
+import { useInView } from "@/hooks/useInView"
 
 type FormState = {
   status: "idle" | "loading" | "success" | "error"
@@ -16,6 +17,7 @@ export default function Contacto() {
     email: "",
     message: "",
   })
+  const { ref, isInView } = useInView()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -24,7 +26,7 @@ export default function Contacto() {
 
   return (
     <section id="contact" className="px-6 py-20 border-t border-border/40">
-      <div className="mx-auto max-w-4xl">
+      <div ref={ref} className={`mx-auto max-w-4xl transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="flex items-center gap-2 mb-4">
           <Mail size={30} className="text-primary" />
           <h2 className="text-3xl font-bold text-primary">Contacto</h2>
@@ -46,7 +48,7 @@ export default function Contacto() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
                 placeholder="Tu nombre"
               />
             </div>
@@ -64,7 +66,7 @@ export default function Contacto() {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
                 placeholder="tu@email.com"
               />
             </div>
@@ -82,7 +84,7 @@ export default function Contacto() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none transition-shadow"
                 placeholder="Cuéntame sobre tu proyecto..."
               />
             </div>
@@ -91,7 +93,7 @@ export default function Contacto() {
           <button
             type="submit"
             disabled={form.status === "loading"}
-            className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-6 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-6 py-2.5 text-sm font-medium hover:opacity-90 transition-all disabled:opacity-50 cursor-pointer active:scale-95"
           >
             {form.status === "loading" ? "Enviando..." : "Enviar mensaje"}
           </button>
