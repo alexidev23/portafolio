@@ -52,10 +52,11 @@ export default function Contacto() {
 
     try {
       await submitContactForm({ name: form.name, email: form.email, message: form.message })
-      setForm(initialForm)
+      setForm((prev) => ({ ...prev, status: "success" }))
       toast.success("Mensaje enviado con éxito", {
         description: "Gracias por contactarme. Te responderé a la brevedad.",
       })
+      setTimeout(() => setForm(initialForm), 3000)
     } catch {
       setForm((prev) => ({ ...prev, status: "error" }))
       toast.error("Error al enviar el mensaje", {
@@ -165,6 +166,8 @@ export default function Contacto() {
                 <Loader2 className="h-4 w-4 animate-spin" />
                 Enviando...
               </>
+            ) : form.status === "success" ? (
+              "Enviado ✓"
             ) : (
               "Enviar mensaje"
             )}
