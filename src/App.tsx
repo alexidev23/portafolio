@@ -12,13 +12,21 @@ import { Toaster } from "sonner"
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Saltar al contenido principal
+      </a>
       <Navbar />
-      <Home />
-      <About /> 
-      <Servicios />
-      <Portafolio />
-      <Tecnologias />
-      <Contacto />
+      <main id="main-content">
+        <Home />
+        <About />
+        <Servicios />
+        <Portafolio />
+        <Tecnologias />
+        <Contacto />
+      </main>
       <Footer />
       <Toaster richColors position="top-right" />
     </ThemeProvider>
