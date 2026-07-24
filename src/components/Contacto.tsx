@@ -30,10 +30,13 @@ function validate(data: ContactForm): FormErrors {
 
 export default function Contacto() {
   const [form, setForm] = useState<FormState>(initialForm)
+  const [submitted, setSubmitted] = useState(false)
   const { ref, isInView } = useInView()
 
-  const errors = useMemo(() => validate(form), [form.name, form.email, form.message])
-  const hasErrors = Object.keys(errors).length > 0
+  const errors = useMemo(() => {
+    if (!submitted) return {}
+    return validate(form)
+  }, [submitted, form.name, form.email, form.message])
 
   const handleChange = (field: keyof ContactForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -41,6 +44,7 @@ export default function Contacto() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitted(true)
     const validationErrors = validate(form)
     if (Object.keys(validationErrors).length > 0) return
 

@@ -68,7 +68,9 @@ export function Navbar () {
               key={id}
               onClick={() => scrollToSection(id)}
               aria-current={activeSection === id ? "page" : undefined}
-              className="text-sm transition-colors hover:text-primary cursor-pointer relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              className={`text-sm transition-colors hover:text-primary cursor-pointer relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-primary after:transition-all hover:after:w-full font-semibold ${
+                activeSection === id ? "text-primary after:w-full" : "after:w-0"
+              }`}
             >
               {label}
             </button>
@@ -96,7 +98,9 @@ export function Navbar () {
                 key={id}
                 onClick={() => scrollToSection(id)}
                 aria-current={activeSection === id ? "page" : undefined}
-                className="py-3 text-left hover:text-primary transition-colors min-h-[44px]"
+                className={`py-3 text-left hover:text-primary transition-colors min-h-[44px] font-semibold ${
+                  activeSection === id ? "text-primary" : ""
+                }`}
               >
                 {label}
               </button>
