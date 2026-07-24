@@ -5,9 +5,11 @@ import Icono from '/iconito.svg'
 import { useScrollTo } from '@/hooks/useScrollTo'
 
 const sections = [
-  { id: "about", label: "Acerca de" },
+  { id: "about", label: "¿Por qué yo?" },
   { id: "services", label: "Servicios" },
+  { id: "process", label: "Proceso" },
   { id: "projects", label: "Proyectos" },
+  { id: "testimonials", label: "Clientes" },
   { id: "contact", label: "Contacto" },
 ]
 

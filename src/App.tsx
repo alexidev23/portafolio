@@ -8,7 +8,9 @@ import { Toaster } from "sonner"
 
 const About = lazy(() => import("./components/About").then(m => ({ default: m.About })))
 const Servicios = lazy(() => import("./components/Servicios"))
+const Process = lazy(() => import("./components/Process"))
 const Portafolio = lazy(() => import("./components/Portfolio"))
+const Testimonials = lazy(() => import("./components/Testimonials"))
 const Tecnologias = lazy(() => import("./components/Tecnologias"))
 const Contacto = lazy(() => import("./components/Contacto"))
 const Footer = lazy(() => import("./components/Footer"))
@@ -62,7 +64,17 @@ function App() {
         </Suspense>
         <Suspense fallback={sectionLoader}>
           <ErrorBoundary>
+            <Process />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
             <Portafolio />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <Testimonials />
           </ErrorBoundary>
         </Suspense>
         <Suspense fallback={sectionLoader}>

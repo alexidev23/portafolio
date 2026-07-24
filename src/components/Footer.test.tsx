@@ -11,6 +11,6 @@ describe("Footer", () => {
 
   it("muestra el nombre del autor", () => {
     render(<Footer />)
-    expect(screen.getByText(/Alexis Escobar/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/Alexis Escobar/i)).toHaveLength(2)
   })
 })

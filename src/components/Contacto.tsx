@@ -74,14 +74,32 @@ export default function Contacto() {
 
   return (
     <section id="contact" className="px-6 py-20 border-t border-border/40">
-      <div ref={ref} className={`mx-auto max-w-4xl transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <div className="flex items-center gap-2 mb-4">
-          <Mail size={30} className="text-primary" />
-          <h2 className="text-3xl font-bold text-primary">Contacto</h2>
-        </div>
-        <p className="text-muted-foreground mb-12 max-w-2xl">
-          ¿Tienes un proyecto en mente? Estoy abierto a nuevas oportunidades. No dudes en escribirme.
-        </p>
+        <div ref={ref} className={`mx-auto max-w-4xl transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="flex items-center gap-2 mb-4">
+            <Mail size={30} className="text-primary" />
+            <h2 className="text-3xl font-bold text-primary">Trabajemos juntos</h2>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-2xl">
+            ¿Tenés un proyecto en mente? Contame sobre tu idea y te respondo con un presupuesto sin compromiso.
+          </p>
+
+          <div className="mb-10 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-border/40 p-4 text-center hover:border-primary/30 transition-all">
+              <p className="text-lg font-bold text-primary">Landing Page</p>
+              <p className="text-2xl font-bold">$150 USD</p>
+              <p className="text-xs text-muted-foreground mt-1">1 página · responsive · formulario</p>
+            </div>
+            <div className="rounded-xl border border-primary/40 bg-primary/5 p-4 text-center hover:border-primary transition-all">
+              <p className="text-lg font-bold text-primary">Sitio Web</p>
+              <p className="text-2xl font-bold">$300+ USD</p>
+              <p className="text-xs text-muted-foreground mt-1">Multi-página · contacto · SEO básico</p>
+            </div>
+            <div className="rounded-xl border border-border/40 p-4 text-center hover:border-primary/30 transition-all">
+              <p className="text-lg font-bold text-primary">Web App</p>
+              <p className="text-2xl font-bold">A consultar</p>
+              <p className="text-xs text-muted-foreground mt-1">React · TypeScript · funcionalidades custom</p>
+            </div>
+          </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 max-w-xl" noValidate>
           <div>
