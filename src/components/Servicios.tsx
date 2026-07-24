@@ -1,9 +1,15 @@
-import { memo } from "react"
+import { memo, type ComponentType } from "react"
 import { Card } from "@/components/ui/card"
-import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers } from "lucide-react"
+import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers, type LucideIcon } from "lucide-react"
 import { useInView } from "@/hooks/useInView"
 
-const services = [
+interface Service {
+  icon: LucideIcon
+  title: string
+  description: string
+}
+
+const services: Service[] = [
   {
     icon: Figma,
     title: "Implementación de Figma",

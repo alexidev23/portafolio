@@ -2,13 +2,7 @@ import { Mail, MessageSquare, User } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
 import { useInView } from "@/hooks/useInView"
-
-type FormState = {
-  status: "idle" | "loading" | "success" | "error"
-  name: string
-  email: string
-  message: string
-}
+import type { FormState } from "@/types/types"
 
 export default function Contacto() {
   const [form, setForm] = useState<FormState>({

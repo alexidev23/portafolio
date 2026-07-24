@@ -1,4 +1,3 @@
-// Proyectos
 import AdultosMayores from "../assets/proyectos/adultosMayores.avif";
 import TechParts from "../assets/proyectos/techparts.avif";
 import Metalurgica from "../assets/proyectos/metalurgicaescobar.avif";
@@ -16,10 +15,10 @@ export const MisProyectos: ProyectosProps[] = [
     tecnologias: [
       "React",
       "TypeScript",
-      "Tailwind",
+      "Tailwind CSS",
       "shadcn/ui",
       "React Router",
-    ],
+    ] as const,
     repositorio: "https://github.com/alexidev23/PFCoder-js-Alexis",
     pagina: "https://pf-coder-js-alexis.vercel.app/",
   },
@@ -27,15 +26,15 @@ export const MisProyectos: ProyectosProps[] = [
     id: 2,
     name: "TechParts – E-commerce de Repuestos para Celulares",
     descripcion:
-      "Aplicación e-commerce creada con React + TypeScript, usando React Router para la navegación, Tailwind para el diseño y componentes shadcn/ui para una UI limpia y reutilizable. Catálogo filtrable y experiencia responsive.",
+      "Aplicación e-commerce creada con React + TypeScript, usando React Router para la navegación, Tailwind CSS para el diseño y componentes shadcn/ui para una UI limpia y reutilizable. Catálogo filtrable y experiencia responsive.",
     imagen: TechParts,
     tecnologias: [
       "React",
       "TypeScript",
-      "Tailwind",
+      "Tailwind CSS",
       "shadcn/ui",
       "React Router",
-    ],
+    ] as const,
     repositorio: "https://github.com/alexidev23/TechParts",
     pagina: "https://techparts.vercel.app/",
   },
@@ -45,7 +44,7 @@ export const MisProyectos: ProyectosProps[] = [
     descripcion:
       "Proyecto freelance para estudiantes de psicología. Página destinada a adultos mayores.",
     imagen: AdultosMayores,
-    tecnologias: ["React", "Tailwind"],
+    tecnologias: ["React", "Tailwind CSS"] as const,
     repositorio: "https://github.com/alexidev23/proyecto-psicologia",
     pagina: "https://pagina-web-para-adultos-mayores.vercel.app/",
   },
@@ -55,7 +54,7 @@ export const MisProyectos: ProyectosProps[] = [
     descripcion:
       "Sitio web creado para un taller de metalúrgica. Incluye formulario de contacto funcional y diseño adaptado al cliente.",
     imagen: Metalurgica,
-    tecnologias: ["Nextjs", "Typescript", "Tailwind", "Shadcn"],
+    tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"] as const,
     repositorio: "https://github.com/alexidev23/metalurgica",
     pagina: "https://www.metalurgicaescobar.com/",
   },
@@ -65,7 +64,7 @@ export const MisProyectos: ProyectosProps[] = [
     descripcion:
       "Aplicación web para gestionar tareas. Permite agregar, editar, eliminar y marcar tareas como completadas.",
     imagen: TodoApp,
-    tecnologias: ["React", "Typescript", "Tailwind", "Shadcn"],
+    tecnologias: ["React", "TypeScript", "Tailwind CSS", "shadcn/ui"] as const,
     repositorio: "https://github.com/alexidev23/todo-frontend",
     pagina: "https://todo-ts-three-kappa.vercel.app/",
   },

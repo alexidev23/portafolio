@@ -1,8 +1,13 @@
 import { memo } from "react"
-import { Code2, Zap, GitBranch, Database, Palette, Rocket, Terminal } from "lucide-react"
+import { Code2, Zap, GitBranch, Database, Palette, Rocket, Terminal, type LucideIcon } from "lucide-react"
 import { useInView } from "@/hooks/useInView"
 
-const technologies = [
+interface TechItem {
+  icon: LucideIcon
+  name: string
+}
+
+const technologies: TechItem[] = [
   { icon: Code2, name: "React" },
   { icon: Code2, name: "TypeScript" },
   { icon: Palette, name: "Tailwind CSS" },
