@@ -15,13 +15,14 @@ export default function Portafolio() {
         </p>
 
         <div className="grid gap-8 grid-cols-2 "> {/* sm:grid-cols-2 lg:grid-cols-3 */}
-          {MisProyectos.map((project, i) => (
-            <Card key={i} className="overflow-hidden hover:shadow-xl transition-all rounded-lg group flex flex-col">
+          {MisProyectos.map((project) => (
+            <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-all rounded-lg group flex flex-col">
               {/* Project Image */}
               <div className="relative h-40 overflow-hidden bg-muted">
                 <img
                   src={project.imagen}
                   alt={project.name}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform group-hover:scale-105"
                 />
               </div>
@@ -34,8 +35,8 @@ export default function Portafolio() {
 
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-3.5">
-                    {project.tecnologias.map((tech, j) => (
-                      <span key={j} className="text-xs px-2 py-1 bg-secondary text-secondary-foreground rounded">
+                    {project.tecnologias.map((tech) => (
+                      <span key={tech} className="text-xs px-2 py-1 bg-secondary text-secondary-foreground rounded">
                         {tech}
                       </span>
                     ))}
@@ -44,11 +45,11 @@ export default function Portafolio() {
 
                 {/* Links */}
                 <div className="flex justify-start gap-2">
-                  <a href={project.pagina} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-6 py-2">
+                  <a href={project.pagina} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-secondary text-secondary-foreground hover:text-primary cursor-pointer border px-6 py-2">
                     <ExternalLink className="h-4 w-4" />
                     Demo
                   </a>
-                  <a href={project.repositorio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-[#151515] hover:text-primary cursor-pointer border px-4 py-2">
+                  <a href={project.repositorio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded bg-secondary text-secondary-foreground hover:text-primary cursor-pointer border px-4 py-2">
                     <Github className="h-4 w-4" />
                     Código
                   </a>

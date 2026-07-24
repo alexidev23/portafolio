@@ -49,10 +49,10 @@ export default function Servicios() {
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => {
+          {services.map((service) => {
             const Icon = service.icon
             return (
-              <Card key={i} className="p-6 hover:border-primary/50 transition-all hover:shadow-lg rounded-lg group">
+              <Card key={service.title} className="p-6 hover:border-primary/50 transition-all hover:shadow-lg rounded-lg group">
                 <Icon className="h-8 w-8 text-primary mb-1 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold mb-0.5">{service.title}</h3>
                 <p className="text-sm text-muted-foreground">{service.description}</p>

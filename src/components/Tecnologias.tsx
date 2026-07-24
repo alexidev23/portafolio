@@ -25,11 +25,11 @@ export default function Tecnologias() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {technologies.map((tech, i) => {
+          {technologies.map((tech) => {
             const Icon = tech.icon
             return (
               <div
-                key={i}
+                key={tech.name}
                 className="flex items-center gap-3 p-4 rounded-lg border border-border/40 hover:border-primary/50 hover:bg-secondary/50 transition-all group cursor-pointer"
               >
                 <Icon className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
