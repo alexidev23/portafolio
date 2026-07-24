@@ -2,7 +2,7 @@ import AdultosMayores from "../assets/proyectos/adultosMayores.avif";
 import TechParts from "../assets/proyectos/techparts.avif";
 import Metalurgica from "../assets/proyectos/metalurgicaescobar.avif";
 import TodoApp from "../assets/proyectos/TodoDarkMode.avif";
-import CodeShelf from "../assets/proyectos/codeShelf.png";
+import CodeShelf from "../assets/proyectos/codeShelf.avif";
 import type { ProyectosProps } from "../types/types";
 
 export const MisProyectos: ProyectosProps[] = [
