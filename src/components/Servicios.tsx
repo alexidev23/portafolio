@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { Card } from "@/components/ui/card"
 import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers } from "lucide-react"
 import { useInView } from "@/hooks/useInView"
@@ -36,7 +37,7 @@ const services = [
   },
 ]
 
-export default function Servicios() {
+const Servicios = memo(function Servicios() {
   const { ref, isInView } = useInView()
 
   return (
@@ -70,4 +71,6 @@ export default function Servicios() {
       </div>
     </section>
   )
-}
+})
+
+export default Servicios

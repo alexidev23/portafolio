@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Briefcase, ExternalLink, Github, X } from "lucide-react"
 import { MisProyectos } from "@/constants/constants"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { useInView } from "@/hooks/useInView"
 
 const techs = Array.from(new Set(MisProyectos.flatMap((p) => p.tecnologias)))
@@ -11,9 +11,12 @@ export default function Portafolio() {
   const [lightbox, setLightbox] = useState<string | null>(null)
   const { ref, isInView } = useInView()
 
-  const filtered = filter
-    ? MisProyectos.filter((p) => p.tecnologias.includes(filter))
-    : MisProyectos
+  const filtered = useMemo(
+    () => filter
+      ? MisProyectos.filter((p) => p.tecnologias.includes(filter))
+      : MisProyectos,
+    [filter]
+  )
 
   return (
     <section id="projects" className="px-6 py-20 border-t border-border/40">
@@ -26,7 +29,6 @@ export default function Portafolio() {
           Una selección de proyectos que muestran mis habilidades en React, TypeScript y desarrollo web moderno.
         </p>
 
-        {/* Filter */}
         <div className="flex flex-wrap gap-2 mb-8">
           <button
             onClick={() => setFilter(null)}
@@ -91,7 +93,6 @@ export default function Portafolio() {
         </div>
       </div>
 
-      {/* Lightbox */}
       {lightbox && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"

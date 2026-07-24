@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react"
+import { lazy, Suspense, useEffect, useMemo, useState } from "react"
 import { ArrowUp } from "lucide-react"
-import { About } from "./components/About"
-import Contacto from "./components/Contacto"
-import Servicios from "./components/Servicios"
-import Footer from "./components/Footer"
-import { Home } from "./components/Home"
 import { Navbar } from "./components/Navbar"
-import Portafolio from "./components/Portfolio"
-import Tecnologias from "./components/Tecnologias"
+import { Home } from "./components/Home"
 import { ThemeProvider } from "./components/theme-provider"
+import { ErrorBoundary } from "./components/ErrorBoundary"
 import { Toaster } from "sonner"
+
+const About = lazy(() => import("./components/About").then(m => ({ default: m.About })))
+const Servicios = lazy(() => import("./components/Servicios"))
+const Portafolio = lazy(() => import("./components/Portfolio"))
+const Tecnologias = lazy(() => import("./components/Tecnologias"))
+const Contacto = lazy(() => import("./components/Contacto"))
+const Footer = lazy(() => import("./components/Footer"))
 
 function ScrollToTop() {
   const [visible, setVisible] = useState(false)
@@ -33,25 +35,50 @@ function ScrollToTop() {
   )
 }
 
+const sectionLoader = (
+  <div className="flex min-h-[200px] items-center justify-center">
+    <div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+  </div>
+)
+
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <a
-        href="#main-content"
-        className="skip-link"
-      >
+      <a href="#main-content" className="skip-link">
         Saltar al contenido principal
       </a>
       <Navbar />
       <main id="main-content">
         <Home />
-        <About />
-        <Servicios />
-        <Portafolio />
-        <Tecnologias />
-        <Contacto />
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <About />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <Servicios />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <Portafolio />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <Tecnologias />
+          </ErrorBoundary>
+        </Suspense>
+        <Suspense fallback={sectionLoader}>
+          <ErrorBoundary>
+            <Contacto />
+          </ErrorBoundary>
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
       <ScrollToTop />
       <Toaster richColors position="top-right" />
     </ThemeProvider>

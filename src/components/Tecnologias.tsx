@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { Code2, Zap, GitBranch, Database, Palette, Rocket, Terminal } from "lucide-react"
 import { useInView } from "@/hooks/useInView"
 
@@ -16,7 +17,7 @@ const technologies = [
   { icon: Rocket, name: "Rendimiento" },
 ]
 
-export default function Tecnologias() {
+const Tecnologias = memo(function Tecnologias() {
   const { ref, isInView } = useInView()
 
   return (
@@ -45,4 +46,6 @@ export default function Tecnologias() {
       </div>
     </section>
   )
-}
+})
+
+export default Tecnologias

@@ -1,7 +1,8 @@
 import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { ModeToggle } from './mode-toggle'
 import Icono from '/iconito.svg'
+import { useScrollTo } from '@/hooks/useScrollTo'
 
 const sections = [
   { id: "about", label: "Acerca de" },
@@ -14,6 +15,7 @@ export function Navbar () {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const [scrollProgress, setScrollProgress] = useState(0)
+  const scrollTo = useScrollTo()
 
   useEffect(() => {
     const observers = sections.map(({ id }) => {
@@ -41,15 +43,13 @@ export function Navbar () {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
+  const scrollToSection = useCallback((id: string) => {
+    scrollTo(id)
     setMobileMenuOpen(false)
-  }
+  }, [scrollTo])
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      {/* Scroll progress bar */}
       <div className="absolute bottom-0 left-0 h-[2px] bg-primary/20 w-full">
         <div
           className="h-full bg-primary transition-[width] duration-150 ease-out"
@@ -62,7 +62,6 @@ export function Navbar () {
           <img alt='Logo de Alexis Escobar' src={Icono} className='h-8 w-8' />
         </div>
 
-        {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
           {sections.map(({ id, label }) => (
             <button
@@ -76,7 +75,6 @@ export function Navbar () {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="flex items-center gap-2">
           <ModeToggle />
           <button
@@ -90,7 +88,6 @@ export function Navbar () {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="border-t border-border/40 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1 px-6 py-4">
