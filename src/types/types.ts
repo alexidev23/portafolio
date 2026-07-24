@@ -46,6 +46,7 @@ export interface ProyectosProps {
   tecnologias: Tech[]
   repositorio: string
   pagina: string
+  destacado?: boolean
 }
 
 export interface ContactForm {

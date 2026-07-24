@@ -47,13 +47,18 @@ export default function Portafolio() {
           ))}
         </div>
 
-        <div className="grid gap-8 grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
           {filtered.map((project) => (
-            <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-all rounded-lg group flex flex-col hover:border-primary/30">
+            <Card key={project.id} className={`overflow-hidden hover:shadow-xl transition-all rounded-lg group flex flex-col hover:border-primary/30 ${project.destacado ? 'ring-1 ring-primary/20' : ''}`}>
               <div
-                className="relative h-40 overflow-hidden bg-muted cursor-pointer"
+                className="relative h-44 overflow-hidden bg-muted cursor-pointer"
                 onClick={() => setLightbox(project.imagen)}
               >
+                {project.destacado && (
+                  <span className="absolute top-2 left-2 z-10 text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground font-medium">
+                    Cliente real
+                  </span>
+                )}
                 <img
                   src={project.imagen}
                   alt={`Captura del proyecto ${project.name}`}

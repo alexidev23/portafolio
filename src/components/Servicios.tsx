@@ -1,7 +1,9 @@
-import { memo, type ComponentType } from "react"
+import { memo } from "react"
 import { Card } from "@/components/ui/card"
-import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers, type LucideIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Code2, Globe, Zap, RotateCw, Figma, Package, Layers, ArrowRight, type LucideIcon } from "lucide-react"
 import { useInView } from "@/hooks/useInView"
+import { useScrollTo } from "@/hooks/useScrollTo"
 
 interface Service {
   icon: LucideIcon
@@ -45,6 +47,7 @@ const services: Service[] = [
 
 const Servicios = memo(function Servicios() {
   const { ref, isInView } = useInView()
+  const scrollTo = useScrollTo()
 
   return (
     <section id="services" className="px-6 py-20 border-t border-border/40">
@@ -73,6 +76,12 @@ const Servicios = memo(function Servicios() {
               </Card>
             )
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button size="lg" onClick={() => scrollTo("contact")} className="rounded-lg gap-2 cursor-pointer text-base">
+            Solicitar presupuesto <ArrowRight className="h-4 w-4" />
+          </Button>
         </div>
       </div>
     </section>
