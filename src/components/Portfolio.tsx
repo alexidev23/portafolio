@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Briefcase, ExternalLink, Github, X } from "lucide-react"
 import { MisProyectos } from "@/constants/constants"
+import type { Tech } from "@/types/types"
 import { useMemo, useState } from "react"
 import { useInView } from "@/hooks/useInView"
 
@@ -13,7 +14,7 @@ export default function Portafolio() {
 
   const filtered = useMemo(
     () => filter
-      ? MisProyectos.filter((p) => p.tecnologias.includes(filter))
+      ? MisProyectos.filter((p) => p.tecnologias.includes(filter as Tech))
       : MisProyectos,
     [filter]
   )

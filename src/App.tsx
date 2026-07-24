@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react"
+import { lazy, Suspense, useEffect, useState } from "react"
 import { ArrowUp } from "lucide-react"
 import { Navbar } from "./components/Navbar"
 import { Home } from "./components/Home"
