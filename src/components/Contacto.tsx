@@ -1,22 +1,71 @@
-import { Mail, MessageSquare, User } from "lucide-react"
-import { useState } from "react"
+import { Loader2, Mail, MessageSquare, User } from "lucide-react"
+import { useMemo, useState } from "react"
 import { toast } from "sonner"
 import { useInView } from "@/hooks/useInView"
-import type { FormState } from "@/types/types"
+import { submitContactForm } from "@/lib/contact"
+import type { ContactForm, FormErrors, FormState } from "@/types/types"
+
+const initialForm: FormState = {
+  status: "idle",
+  name: "",
+  email: "",
+  message: "",
+}
+
+function validate(data: ContactForm): FormErrors {
+  const errors: FormErrors = {}
+  if (!data.name.trim()) {
+    errors.name = "El nombre es obligatorio"
+  }
+  if (!data.email.trim()) {
+    errors.email = "El email es obligatorio"
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    errors.email = "El email no es válido"
+  }
+  if (!data.message.trim()) {
+    errors.message = "El mensaje es obligatorio"
+  }
+  return errors
+}
 
 export default function Contacto() {
-  const [form, setForm] = useState<FormState>({
-    status: "idle",
-    name: "",
-    email: "",
-    message: "",
-  })
+  const [form, setForm] = useState<FormState>(initialForm)
   const { ref, isInView } = useInView()
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    toast.success("Mensaje enviado (demo)")
+  const errors = useMemo(() => validate(form), [form.name, form.email, form.message])
+  const hasErrors = Object.keys(errors).length > 0
+
+  const handleChange = (field: keyof ContactForm, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }))
   }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const validationErrors = validate(form)
+    if (Object.keys(validationErrors).length > 0) return
+
+    setForm((prev) => ({ ...prev, status: "loading" }))
+
+    try {
+      await submitContactForm({ name: form.name, email: form.email, message: form.message })
+      setForm(initialForm)
+      toast.success("Mensaje enviado con éxito", {
+        description: "Gracias por contactarme. Te responderé a la brevedad.",
+      })
+    } catch {
+      setForm((prev) => ({ ...prev, status: "error" }))
+      toast.error("Error al enviar el mensaje", {
+        description: "Ocurrió un error inesperado. Intentalo de nuevo más tarde.",
+      })
+    }
+  }
+
+  const inputClass = (field: keyof FormErrors) =>
+    `w-full rounded-lg border py-2.5 pl-10 pr-4 text-sm bg-background focus:outline-none focus:ring-2 transition-shadow ${
+      errors[field]
+        ? "border-destructive focus:ring-destructive/50"
+        : "border-border/40 focus:ring-primary/50"
+    }`
 
   return (
     <section id="contact" className="px-6 py-20 border-t border-border/40">
@@ -29,7 +78,7 @@ export default function Contacto() {
           ¿Tienes un proyecto en mente? Estoy abierto a nuevas oportunidades. No dudes en escribirme.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6 max-w-xl">
+        <form onSubmit={handleSubmit} className="space-y-6 max-w-xl" noValidate>
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
               Nombre
@@ -40,12 +89,18 @@ export default function Contacto() {
                 id="name"
                 type="text"
                 value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
+                onChange={(e) => handleChange("name", e.target.value)}
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? "name-error" : undefined}
+                className={inputClass("name")}
                 placeholder="Tu nombre"
               />
             </div>
+            {errors.name && (
+              <p id="name-error" role="alert" className="mt-1 text-xs text-destructive">
+                {errors.name}
+              </p>
+            )}
           </div>
 
           <div>
@@ -58,12 +113,18 @@ export default function Contacto() {
                 id="email"
                 type="email"
                 value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
+                onChange={(e) => handleChange("email", e.target.value)}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
+                className={inputClass("email")}
                 placeholder="tu@email.com"
               />
             </div>
+            {errors.email && (
+              <p id="email-error" role="alert" className="mt-1 text-xs text-destructive">
+                {errors.email}
+              </p>
+            )}
           </div>
 
           <div>
@@ -76,12 +137,18 @@ export default function Contacto() {
                 id="message"
                 rows={5}
                 value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                required
-                className="w-full rounded-lg border border-border/40 bg-background py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none transition-shadow"
+                onChange={(e) => handleChange("message", e.target.value)}
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "message-error" : undefined}
+                className={`${inputClass("message")} resize-none pt-2.5`}
                 placeholder="Cuéntame sobre tu proyecto..."
               />
             </div>
+            {errors.message && (
+              <p id="message-error" role="alert" className="mt-1 text-xs text-destructive">
+                {errors.message}
+              </p>
+            )}
           </div>
 
           <button
@@ -89,7 +156,14 @@ export default function Contacto() {
             disabled={form.status === "loading"}
             className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-6 py-2.5 text-sm font-medium hover:opacity-90 transition-all disabled:opacity-50 cursor-pointer active:scale-95"
           >
-            {form.status === "loading" ? "Enviando..." : "Enviar mensaje"}
+            {form.status === "loading" ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Enviando...
+              </>
+            ) : (
+              "Enviar mensaje"
+            )}
           </button>
         </form>
       </div>

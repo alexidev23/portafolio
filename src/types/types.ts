@@ -59,3 +59,9 @@ export type FormStatus = "idle" | "loading" | "success" | "error"
 export type FormState = {
   status: FormStatus
 } & ContactForm
+
+export type FormErrors = {
+  name?: string
+  email?: string
+  message?: string
+}
