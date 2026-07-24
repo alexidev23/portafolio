@@ -21,7 +21,7 @@ export default function Portafolio() {
               <div className="relative h-40 overflow-hidden bg-muted">
                 <img
                   src={project.imagen}
-                  alt={project.name}
+                  alt={`Captura del proyecto ${project.name}`}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform group-hover:scale-105"
                 />
