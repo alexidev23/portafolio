@@ -56,7 +56,10 @@ export default function Contacto() {
       toast.success("Mensaje enviado con éxito", {
         description: "Gracias por contactarme. Te responderé a la brevedad.",
       })
-      setTimeout(() => setForm(initialForm), 3000)
+      setTimeout(() => {
+        setForm(initialForm)
+        setSubmitted(false)
+      }, 3000)
     } catch {
       setForm((prev) => ({ ...prev, status: "error" }))
       toast.error("Error al enviar el mensaje", {
