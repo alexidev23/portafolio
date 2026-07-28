@@ -1,15 +1,20 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer aria-label="Pie de página" className="border-t border-border/40 bg-card/50 px-6 py-10">
+    <footer
+      aria-label="Pie de página"
+      className="border-t border-border/40 bg-card/50 px-6 py-10"
+    >
       <div className="mx-auto max-w-4xl">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-semibold text-foreground">Alexis Escobar</p>
-            <p className="text-sm text-muted-foreground">Desarrollador Frontend Freelance</p>
+            <p className="text-sm text-muted-foreground">
+              Desarrollador Frontend Freelance
+            </p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -24,7 +29,7 @@ export default function Footer() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/alexis-escobar-0a987b2b3/"
+              href="https://www.linkedin.com/in/alexis-escobar-95b491184/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -49,5 +54,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
