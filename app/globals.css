@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-heading: var(--font-jetbrains-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Light — soft, warm and reduced in brightness */
+  --background: oklch(0.975 0.012 155);
+  --foreground: oklch(0.185 0.012 160);
+  --card: oklch(0.998 0.014 155);
+  --card-foreground: oklch(0.185 0.012 160);
+  --popover: oklch(0.998 0.014 155);
+  --popover-foreground: oklch(0.185 0.012 160);
+
+  --primary: oklch(0.39 0.11 162);
+  --primary-foreground: oklch(0.985 0.01 160);
+  --secondary: oklch(0.94 0.014 160);
+  --secondary-foreground: oklch(0.23 0.028 160);
+
+  --muted: oklch(0.94 0.016 160);
+  --muted-foreground: oklch(0.47 0.025 160);
+
+  --accent: oklch(0.945 0.014 155);
+  --accent-foreground: oklch(0.39 0.11 162);
+
+  --border: oklch(0.86 0.016 160);
+  --input: oklch(0.86 0.016 160);
+  --ring: oklch(0.65 0.15 162);
+}
+
+.dark {
+  --background: oklch(0.13 0.012 160);
+  --foreground: oklch(0.955 0.008 160);
+  --card: oklch(0.17 0.012 160);
+  --card-foreground: oklch(0.955 0.008 160);
+  --popover: oklch(0.17 0.012 160);
+  --popover-foreground: oklch(0.955 0.008 160);
+  --primary: oklch(0.75 0.17 162);
+  --primary-foreground: oklch(0.16 0.04 162);
+  --secondary: oklch(0.23 0.015 160);
+  --secondary-foreground: oklch(0.955 0.008 160);
+  --muted: oklch(0.23 0.015 160);
+  --muted-foreground: oklch(0.7 0.015 160);
+  --accent: oklch(0.75 0.17 162);
+  --accent-foreground: oklch(0.16 0.04 162);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.75 0.17 162);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+  h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Reveal escalonado al montar */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-reveal > :not([hidden]) {
+  animation: fade-in-up 0.45s ease-out both;
+}
+.section-reveal > :nth-child(1) { animation-delay: 0ms; }
+.section-reveal > :nth-child(2) { animation-delay: 75ms; }
+.section-reveal > :nth-child(3) { animation-delay: 150ms; }
+.section-reveal > :nth-child(4) { animation-delay: 225ms; }
+.section-reveal > :nth-child(5) { animation-delay: 300ms; }
+.section-reveal > :nth-child(6) { animation-delay: 375ms; }
+.section-reveal > :nth-child(7) { animation-delay: 450ms; }
+.section-reveal > :nth-child(8) { animation-delay: 525ms; }
+
+/* Cursor parpadeante para estilo terminal */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1.05s step-end infinite;
+}
+
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+/* Focus visible - outline estilizado */
+*:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: #10b981;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cursor-blink {
+    animation: none;
+    opacity: 1;
+  }
+}
