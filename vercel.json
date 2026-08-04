@@ -1,0 +1,42 @@
+{
+  "$schema": "https://open-next.js.org/schema.json",
+  "cleanOutputs": true,
+  "buildCommand": "pnpm build",
+  "framework": "nextjs",
+  "functions": {
+    "app/**": {
+      "runtime": "nodejs22.x",
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "images": {
+    "sizes": [16, 32, 48, 64, 96, 128, 256, 384, 512],
+    "domains": ["avatars.githubusercontent.com"]
+  },
+  "redirects": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.svg",
+      "permanent": true
+    }
+  ]
+}

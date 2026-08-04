@@ -30,6 +30,13 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Turbopack cache settings for dev (Windows stability)
+  // Note: Dev server uses --webpack flag to avoid Turbopack hangs on Windows
+  ...(process.env.NODE_ENV === "development" && {
+    logging: {
+      fetches: { fullUrl: true },
+    },
+  }),
 };
 
 export default nextConfig;
