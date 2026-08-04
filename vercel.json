@@ -1,11 +1,9 @@
 {
-  "$schema": "https://open-next.js.org/schema.json",
-  "cleanOutputs": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm build",
   "framework": "nextjs",
   "functions": {
     "app/**": {
-      "runtime": "nodejs22.x",
       "maxDuration": 30
     }
   },
