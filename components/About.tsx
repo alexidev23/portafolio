@@ -6,8 +6,8 @@ export default function About() {
     <section id="sobre-mi" className="border-b border-border bg-card/50">
       <div className="section-reveal mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
         <h2 className="mb-10 font-mono text-xs text-muted-foreground">
-          <span className="text-emerald-600 dark:text-emerald-400">05.</span>{" "}
-          ~/ sobre mí
+          <span className="text-emerald-600 dark:text-emerald-400">05.</span> ~/
+          sobre mí
         </h2>
 
         <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-start">
@@ -30,10 +30,6 @@ export default function About() {
               <span className="text-emerald-600 dark:text-emerald-400">$</span>{" "}
               formación:{" "}
               <span className="text-foreground">{about.education}</span>
-              <span className="text-muted-foreground">
-                {" "}
-                ({about.certifications.institution})
-              </span>
             </p>
 
             <p className="font-mono text-xs">
@@ -41,6 +37,10 @@ export default function About() {
               certificaciones:{" "}
               <span className="text-foreground">
                 {about.certifications.items.join(", ")}
+              </span>
+              <span className="text-muted-foreground">
+                {" "}
+                ({about.certifications.institution})
               </span>
             </p>
           </div>

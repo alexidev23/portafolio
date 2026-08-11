@@ -150,7 +150,8 @@ export const experience: Experience[] = [
 
 export const about = {
   bio: "Desarrollador frontend especializado en React, Svelte y Next.js. Construyo interfaces limpias y responsivas, con foco en experiencia de usuario y buenas prácticas. Actualmente expandiendo mi stack hacia Node.js y Express para un perfil fullstack. Disponible para trabajo remoto.",
-  education: "Técnico Superior en Programación — TECLAB",
+  education:
+    "Estudiante de Ingenieria en Sistemas - UTN FRC, Técnico Superior en Programación — TECLAB",
   certifications: {
     institution: "CoderHouse",
     items: ["JavaScript Avanzado", "Tester QA Manual", "Python & Django"],
